@@ -1,0 +1,34 @@
+using FluentAssertions;
+
+namespace LeetCode.Solutions.Medium._49_Group_Anagrams;
+
+public class Tests
+{
+    [Test]
+    public void GroupAnagrams_NotEmpty_ReturnsGroupedAnagrams()
+    {
+        var anagrams = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+        var expectedResult = new List<IList<string>>() {
+            new List<string> { "bat" },
+            new List<string> { "nat", "tan" },
+            new List<string> { "ate", "eat", "tea" }
+        };
+
+        var result = new Solution().GroupAnagrams(anagrams);
+
+        result.Should().BeEquivalentTo(expectedResult);
+    }
+
+    [Test]
+    public void GroupAnagrams_OneWord_ReturnsOneGroup()
+    {
+        var anagrams = new string[] { "a" };
+        var expectedResult = new List<IList<string>>() {
+            new List<string> { "a" },
+        };
+
+        var result = new Solution().GroupAnagrams(anagrams);
+
+        result.Should().BeEquivalentTo(expectedResult);
+    }
+}
