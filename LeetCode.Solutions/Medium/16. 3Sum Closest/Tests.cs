@@ -1,5 +1,3 @@
-using FluentAssertions;
-
 namespace LeetCode.Solutions.Medium._16_3_Sum_Closest;
 
 public class Tests
