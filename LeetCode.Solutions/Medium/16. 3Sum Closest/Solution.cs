@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._16_3_Sum_Closest;
 
 /// <summary>
-/// https://leetcode.com/problems/3sum-closest/
+///     https://leetcode.com/problems/3sum-closest/
 /// </summary>
 public class Solution
 {

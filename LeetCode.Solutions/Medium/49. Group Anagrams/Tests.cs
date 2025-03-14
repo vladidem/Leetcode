@@ -7,8 +7,9 @@ public class Tests
     [Test]
     public void GroupAnagrams_NotEmpty_ReturnsGroupedAnagrams()
     {
-        var anagrams = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
-        var expectedResult = new List<IList<string>>() {
+        string[] anagrams = new[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+        var expectedResult = new List<IList<string>>
+        {
             new List<string> { "bat" },
             new List<string> { "nat", "tan" },
             new List<string> { "ate", "eat", "tea" }
@@ -22,9 +23,10 @@ public class Tests
     [Test]
     public void GroupAnagrams_OneWord_ReturnsOneGroup()
     {
-        var anagrams = new string[] { "a" };
-        var expectedResult = new List<IList<string>>() {
-            new List<string> { "a" },
+        string[] anagrams = new[] { "a" };
+        var expectedResult = new List<IList<string>>
+        {
+            new List<string> { "a" }
         };
 
         var result = new Solution().GroupAnagrams(anagrams);

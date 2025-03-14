@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Easy._217_Contains_Duplicate;
 
 /// <summary>
-/// https://leetcode.com/problems/contains-duplicate/
+///     https://leetcode.com/problems/contains-duplicate/
 /// </summary>
 public class Solution
 {
@@ -15,6 +15,7 @@ public class Solution
 
             uniqueNums.Add(num);
         }
+
         return false;
     }
 }

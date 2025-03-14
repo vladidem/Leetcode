@@ -1,5 +1,3 @@
-using FluentAssertions;
-
 namespace LeetCode.Solutions.Medium._713_Subarray_Product_Less_Than_K;
 
 public class Tests

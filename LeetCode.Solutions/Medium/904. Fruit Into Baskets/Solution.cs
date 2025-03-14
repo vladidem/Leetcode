@@ -1,10 +1,9 @@
 ﻿namespace LeetCode.Solutions.Medium._904_Fruit_Into_Baskets;
 
 /// <summary>
-/// https://leetcode.com/problems/fruit-into-baskets/
-/// 
-/// see 340
-/// https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
+///     https://leetcode.com/problems/fruit-into-baskets/
+///     see 340
+///     https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
 /// </summary>
 public class Solution
 {
@@ -27,7 +26,7 @@ public class Solution
                 baskets[endFruit] = 1;
                 basketsWithFruits++;
             }
-            
+
             while (basketsWithFruits > maxBaskets)
             {
                 int startFruit = fruits[windowStart];
@@ -36,16 +35,17 @@ public class Solution
                 {
                     basketsWithFruits--;
                 }
+
                 windowStart++;
             }
-            
+
             int windowLength = windowEnd - windowStart + 1;
             if (windowLength > maxLenght)
             {
                 maxLenght = windowLength;
             }
         }
-        
+
         return maxLenght;
     }
 }

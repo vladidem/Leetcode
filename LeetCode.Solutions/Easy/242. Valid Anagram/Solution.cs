@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Easy._242_Valid_Anagram;
 
 /// <summary>
-/// https://leetcode.com/problems/valid-anagram/
+///     https://leetcode.com/problems/valid-anagram/
 /// </summary>
 public class Solution
 {

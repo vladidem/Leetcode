@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._209_Minimum_Size_Subarray_Sum;
 
 /// <summary>
-/// https://leetcode.com/problems/minimum-size-subarray-sum/description/
+///     https://leetcode.com/problems/minimum-size-subarray-sum/description/
 /// </summary>
 public class Solution
 {
@@ -26,7 +26,7 @@ public class Solution
                 windowStart++;
             }
         }
-        
+
         return minimumLenght ?? 0;
     }
 }

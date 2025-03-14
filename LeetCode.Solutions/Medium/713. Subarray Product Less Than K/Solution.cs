@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._713_Subarray_Product_Less_Than_K;
 
 /// <summary>
-/// https://leetcode.com/problems/subarray-product-less-than-k/
+///     https://leetcode.com/problems/subarray-product-less-than-k/
 /// </summary>
 public class Solution
 {
@@ -15,7 +15,7 @@ public class Solution
         for (int windowEnd = 0; windowEnd < nums.Length; windowEnd++)
         {
             windowProduct *= nums[windowEnd];
-            
+
             while (windowProduct >= target && windowStart < windowEnd)
             {
                 windowProduct /= nums[windowStart];
@@ -25,7 +25,7 @@ public class Solution
             if (windowProduct < target)
             {
                 int numsInWindow = windowEnd - windowStart + 1;
-              
+
                 count += numsInWindow;
             }
         }

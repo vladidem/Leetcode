@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._238_Product_of_Array_Except_Self;
 
 /// <summary>
-/// https://leetcode.com/problems/product-of-array-except-self/
+///     https://leetcode.com/problems/product-of-array-except-self/
 /// </summary>
 public class Solution
 {

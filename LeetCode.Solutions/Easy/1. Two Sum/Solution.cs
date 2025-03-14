@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Easy._1_Two_Sum;
 
 /// <summary>
-/// https://leetcode.com/problems/two-sum/
+///     https://leetcode.com/problems/two-sum/
 /// </summary>
 public class Solution
 {
@@ -12,9 +12,11 @@ public class Solution
         {
             int remainder = target - nums[i];
 
-            if (numPositions.TryGetValue(remainder, out int j)) {
+            if (numPositions.TryGetValue(remainder, out int j))
+            {
                 return [i, j];
             }
+
             numPositions[nums[i]] = i;
         }
 

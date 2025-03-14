@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._75_Sort_Colors;
 
 /// <summary>
-/// https://leetcode.com/problems/sort-colors/
+///     https://leetcode.com/problems/sort-colors/
 /// </summary>
 public class Solution
 {
@@ -13,30 +13,26 @@ public class Solution
     {
         SortColors1Pass(nums);
     }
-    
+
     public void SortColors2Pass(int[] nums)
     {
         int lastSorted = -1;
-        
+
         for (int i = 0; i < nums.Length; i++)
-        {
             if (nums[i] == Red)
             {
                 lastSorted++;
                 (nums[i], nums[lastSorted]) = (nums[lastSorted], nums[i]);
             }
-        }      
-        
+
         for (int i = lastSorted + 1; i < nums.Length; i++)
-        {
             if (nums[i] == White)
             {
                 lastSorted++;
                 (nums[i], nums[lastSorted]) = (nums[lastSorted], nums[i]);
             }
-        }    
     }
-    
+
     public void SortColors1Pass(int[] nums)
     {
         int lastRed = -1;
@@ -59,6 +55,6 @@ public class Solution
                 firstBlue--;
                 (nums[i], nums[firstBlue]) = (nums[firstBlue], nums[i]);
             }
-        }      
+        }
     }
 }

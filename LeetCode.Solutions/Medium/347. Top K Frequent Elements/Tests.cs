@@ -9,7 +9,7 @@ public class Tests
         return new Solution().TopKFrequent(nums, k).Order().ToArray();
     }
 
-    [TestCase(new[] { 1, }, 1, ExpectedResult = new[] { 1 })]
+    [TestCase(new[] { 1 }, 1, ExpectedResult = new[] { 1 })]
     public int[] TopKFrequent_KEqualsLength_ReturnsAll(int[] nums, int k)
     {
         return new Solution().TopKFrequent(nums, k).Order().ToArray();

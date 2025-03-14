@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Easy._125_Valid_Palindrome;
 
 /// <summary>
-/// https://leetcode.com/problems/valid-palindrome/
+///     https://leetcode.com/problems/valid-palindrome/
 /// </summary>
 public class Solution
 {
@@ -12,6 +12,7 @@ public class Solution
             if (s[startPointer] != s[endPointer])
                 return false;
         }
+
         return true;
     }
 }
