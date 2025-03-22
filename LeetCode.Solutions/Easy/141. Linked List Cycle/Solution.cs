@@ -1,6 +1,6 @@
 ﻿using LeetCode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._1141_Linked_List_Cycle;
+namespace LeetCode.Solutions.Easy._141_Linked_List_Cycle;
 
 /// <summary>
 ///     https://leetcode.com/problems/linked-list-cycle/
