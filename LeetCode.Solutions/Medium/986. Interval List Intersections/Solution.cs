@@ -7,27 +7,25 @@ public class Solution
 {
     public int[][] IntervalIntersection(int[][] firstList, int[][] secondList)
     {
-        var secondIntervalIndex = 0;
+        return IntervalIntersectionTwoPointers(firstList, secondList);
+    }
+
+    public int[][] IntervalIntersectionTwoPointers(int[][] firstList, int[][] secondList)
+    {
+        var i = 0;
+        var j = 0;
         var result = new List<int[]>();
+        int[]? intersection;
 
-        foreach (var interval in firstList)
+        while (i < firstList.Length && j < secondList.Length)
         {
-            while (secondIntervalIndex < secondList.Length
-                   && interval[0] > secondList[secondIntervalIndex][1])
-                secondIntervalIndex++;
-
-            int[]? intersection;
-            var movedForward = false;
-            while (secondIntervalIndex < secondList.Length
-                   && (intersection = Intersection(interval, secondList[secondIntervalIndex])) != null)
-            {
+            if ((intersection = Intersection(firstList[i], secondList[j])) != null)
                 result.Add(intersection);
-                movedForward = true;
-                secondIntervalIndex++;
-            }
 
-            if (movedForward)
-                secondIntervalIndex--;
+            if (firstList[i][1] < secondList[j][1])
+                i++;
+            else
+                j++;
         }
 
         return result.ToArray();
@@ -50,6 +48,7 @@ public class Solution
 
         if (left[1] < right[0])
             return null;
+
         return [Math.Max(left[0], right[0]), Math.Min(left[1], right[1])];
     }
 }
