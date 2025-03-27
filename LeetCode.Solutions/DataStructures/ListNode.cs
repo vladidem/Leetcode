@@ -25,6 +25,20 @@ public class ListNode
         return result;
     }
 
+    public int[] ToArray()
+    {
+        var result = new List<int>();
+        var current = this;
+
+        while (current != null)
+        {
+            result.Add(current.val);
+            current = current.next;
+        }
+
+        return result.ToArray();
+    }
+
     public ListNode Last()
     {
         var current = this;
