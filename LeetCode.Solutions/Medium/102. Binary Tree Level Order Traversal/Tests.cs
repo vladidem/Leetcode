@@ -18,7 +18,7 @@ public class Tests
     {
         var result = new Solution().LevelOrder(TreeNode.FromArray(testData.Nums));
 
-        result.Should().BeEquivalentTo(testData.Expected);
+        result.Should().BeEquivalentTo(testData.Expected, options => options.WithStrictOrdering());
     }
 
     public record TestData(int?[] Nums, List<IList<int>> Expected);
