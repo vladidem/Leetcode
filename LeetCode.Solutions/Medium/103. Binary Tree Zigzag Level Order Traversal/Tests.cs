@@ -17,10 +17,10 @@ public class Tests
     [TestCaseSource(nameof(BinaryTreeZigzagLevelOrder_NotEmpty_ReturnsLevelsCases))]
     public void BinaryTreeZigzagLevelOrder_NotEmpty_ReturnsLevels(TestData testData)
     {
-        var result = new Solution().ZigzagLevelOrder(TreeNode.FromArray(testData.Nums));
+        var result = new Solution().ZigzagLevelOrder(TreeNode.FromArray(testData.Tree));
 
         result.Should().BeEquivalentTo(testData.Expected, options => options.WithStrictOrdering());
     }
 
-    public record TestData(int?[] Nums, List<IList<int>> Expected);
+    public record TestData(int?[] Tree, List<IList<int>> Expected);
 }

@@ -17,10 +17,10 @@ public class Tests
     [TestCaseSource(nameof(BinaryTreeLevelOrderBottom_NotEmpty_ReturnsLevelsCases))]
     public void BinaryTreeLevelOrderBottom_NotEmpty_ReturnsLevels(TestData testData)
     {
-        var result = new Solution().LevelOrderBottom(TreeNode.FromArray(testData.Nums));
+        var result = new Solution().LevelOrderBottom(TreeNode.FromArray(testData.Tree));
 
         result.Should().BeEquivalentTo(testData.Expected, options => options.WithStrictOrdering());
     }
 
-    public record TestData(int?[] Nums, List<IList<int>> Expected);
+    public record TestData(int?[] Tree, List<IList<int>> Expected);
 }
