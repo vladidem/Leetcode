@@ -13,20 +13,39 @@ public class TreeNode
         this.right = right;
     }
 
-    public static TreeNode FromArray(int?[] nums)
+    public static TreeNode FromArray(int?[] tree)
     {
-        return GetNode(nums, 0);
-    }
+        if (tree.Length == 0 || tree[0] == null) return null;
+        var root = new TreeNode(tree[0]!.Value);
 
-    private static TreeNode GetNode(int?[] nums, int i)
-    {
-        if (i >= nums.Length || nums[i] == null) return null;
+        List<TreeNode> level = [root];
+        List<TreeNode> nextLevel = [];
+        var i = 1;
+        while (i < tree.Length)
+        {
+            foreach (var node in level)
+            {
+                if (tree[i] != null)
+                {
+                    node.left = new TreeNode(tree[i].Value);
+                    nextLevel.Add(node.left);
+                }
 
-        var node = new TreeNode(
-            nums[i]!.Value,
-            GetNode(nums, (i + 1) * 2 - 1),
-            GetNode(nums, (i + 1) * 2));
+                i++;
 
-        return node;
+                if (tree[i] != null)
+                {
+                    node.right = new TreeNode(tree[i].Value);
+                    nextLevel.Add(node.right);
+                }
+
+                i++;
+            }
+
+            level = nextLevel;
+            nextLevel = new List<TreeNode>();
+        }
+
+        return root;
     }
 }
