@@ -25,7 +25,7 @@ public class TreeNode
         {
             foreach (var node in level)
             {
-                if (tree[i] != null)
+                if (i < tree.Length && tree[i] != null)
                 {
                     node.left = new TreeNode(tree[i].Value);
                     nextLevel.Add(node.left);
@@ -33,7 +33,7 @@ public class TreeNode
 
                 i++;
 
-                if (tree[i] != null)
+                if (i < tree.Length && tree[i] != null)
                 {
                     node.right = new TreeNode(tree[i].Value);
                     nextLevel.Add(node.right);
