@@ -12,13 +12,13 @@ public class Solution
         if (root == null) return 0;
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
-        var depth = 1;
+        int depth = 1;
 
         while (queue.Count > 0)
         {
-            var levelSize = queue.Count;
+            int levelSize = queue.Count;
 
-            for (var i = 0; i < levelSize; i++)
+            for (int i = 0; i < levelSize; i++)
             {
                 var node = queue.Dequeue();
 

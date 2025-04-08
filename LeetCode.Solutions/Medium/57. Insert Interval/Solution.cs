@@ -10,8 +10,8 @@ public class Solution
         if (intervals.Length == 0)
             return [newInterval];
 
-        var start = 0;
-        var end = 0;
+        int start = 0;
+        int end = 0;
         if (intervals[0][0] <= newInterval[0])
         {
             start = intervals[0][0];
@@ -25,7 +25,8 @@ public class Solution
 
         var result = new List<int[]>();
 
-        foreach (var interval in IntervalIterator(intervals, newInterval))
+        foreach (int[] interval in IntervalIterator(intervals, newInterval))
+        {
             if (interval[0] <= end)
             {
                 end = Math.Max(interval[1], end);
@@ -36,6 +37,7 @@ public class Solution
                 start = interval[0];
                 end = interval[1];
             }
+        }
 
         result.Add([start, end]);
 
@@ -44,9 +46,9 @@ public class Solution
 
     private IEnumerable<int[]> IntervalIterator(int[][] intervals, int[] newInterval)
     {
-        var sortedIntervals = intervals.OrderBy(i => i[0]).ToArray();
-        var returned = false;
-        foreach (var interval in sortedIntervals)
+        int[][]? sortedIntervals = intervals.OrderBy(i => i[0]).ToArray();
+        bool returned = false;
+        foreach (int[]? interval in sortedIntervals)
         {
             if (!returned && interval[0] >= newInterval[0])
             {

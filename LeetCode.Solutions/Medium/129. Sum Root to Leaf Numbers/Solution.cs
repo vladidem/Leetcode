@@ -30,7 +30,7 @@ public class Solution
 
         var stack = new Stack<Path>();
         stack.Push(new Path(root, [root.val]));
-        var result = 0;
+        int result = 0;
 
         while (stack.Count > 0)
         {
@@ -58,10 +58,12 @@ public class Solution
 
         public int DigitsSum()
         {
-            var result = 0;
+            int result = 0;
 
-            foreach (var digit in values)
+            foreach (int digit in values)
+            {
                 result = result * 10 + digit;
+            }
 
             return result;
         }

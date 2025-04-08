@@ -9,7 +9,7 @@ public class Tests
         new[] { 2.00000, 3.00000, 3.00000, 3.00000, 2.00000, 3.00000, 2.00000 })]
     public void MedianSlidingWindow_NotEmptySequence_ReturnsMediansForWindows(int k, int[] numbers, double[] result)
     {
-        var solution = new Solution().MedianSlidingWindow(numbers, k);
+        double[] solution = new Solution().MedianSlidingWindow(numbers, k);
         solution.Should().BeEquivalentTo(result, opt => opt.WithStrictOrdering());
     }
 
@@ -28,7 +28,7 @@ public class Tests
         })]
     public void MedianSlidingWindow_Overflow_ReturnsMediansForWindows(int k, int[] numbers, double[] result)
     {
-        var solution = new Solution().MedianSlidingWindow(numbers, k);
+        double[] solution = new Solution().MedianSlidingWindow(numbers, k);
         solution.Should().BeEquivalentTo(result, opt => opt.WithStrictOrdering());
     }
 }

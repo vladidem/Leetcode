@@ -7,18 +7,22 @@ public class Solution
 {
     public IList<int> FindDisappearedNumbers(int[] nums)
     {
-        var i = 0;
+        int i = 0;
         var result = new List<int>();
 
         while (i < nums.Length)
+        {
             if (nums[i] != i + 1 && nums[i] != nums[nums[i] - 1])
                 (nums[i], nums[nums[i] - 1]) = (nums[nums[i] - 1], nums[i]);
             else
                 i++;
+        }
 
         for (i = 0; i < nums.Length; i++)
+        {
             if (nums[i] != i + 1)
                 result.Add(i + 1);
+        }
 
         return result;
     }

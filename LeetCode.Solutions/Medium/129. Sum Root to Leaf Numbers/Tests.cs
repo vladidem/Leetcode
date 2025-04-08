@@ -20,7 +20,7 @@ public class Tests
     [TestCaseSource(nameof(SumNumbers_NotEmptyTree_ReturnsSumOfAllPathsCases))]
     public void SumNumbers_NotEmptyTree_ReturnsSumOfAllPaths(TestData testData)
     {
-        var result = new Solution().SumNumbers(TreeNode.FromArray(testData.Tree));
+        int result = new Solution().SumNumbers(TreeNode.FromArray(testData.Tree));
 
         result.Should().Be(testData.result);
     }

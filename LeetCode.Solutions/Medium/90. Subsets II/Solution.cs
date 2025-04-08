@@ -13,7 +13,7 @@ public class Solution
         sets.Add([]);
         IList<IList<int>> current = new List<IList<int>>(sets);
 
-        for (var i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++)
         {
             if (i > 0 && nums[i] == nums[i - 1])
                 current = current.Select(it =>

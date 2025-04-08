@@ -7,8 +7,11 @@ public class Tests
     public double MedianFinder_NotEmptySequence_ReturnsMedianAfterEachStep(int[] numbers)
     {
         var medianFinder = new MedianFinder();
-        foreach (var number in numbers)
+        foreach (int number in numbers)
+        {
             medianFinder.AddNum(number);
+        }
+
         return medianFinder.FindMedian();
     }
 }

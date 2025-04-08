@@ -11,7 +11,7 @@ public class Solution
     {
         var current = head;
         ListNode? previous = null;
-        for (var i = 1; i < left; i++)
+        for (int i = 1; i < left; i++)
         {
             previous = current;
             current = current.next;
@@ -20,7 +20,7 @@ public class Solution
         var leftNode = current;
         var preLeftNode = previous;
 
-        for (var i = left; i < right; i++) current = current.next;
+        for (int i = left; i < right; i++) current = current.next;
 
         var rightNode = current;
         var postRightNode = current.next;

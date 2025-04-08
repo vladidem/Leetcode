@@ -16,10 +16,10 @@ public class Solution
 
         while (queue.Count > 0)
         {
-            var levelSize = queue.Count;
+            int levelSize = queue.Count;
             var level = new List<int>();
 
-            for (var i = 0; i < levelSize; i++)
+            for (int i = 0; i < levelSize; i++)
             {
                 var node = queue.Dequeue();
                 level.Add(node.val);

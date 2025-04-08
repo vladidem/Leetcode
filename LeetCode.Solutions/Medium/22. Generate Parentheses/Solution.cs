@@ -15,7 +15,7 @@ public class Solution
         List<Permutation> result = new();
         result.Add(new Permutation(OpenParenthesis, 1, 0));
 
-        for (var i = 1; i < n * 2; i++)
+        for (int i = 1; i < n * 2; i++)
         {
             List<Permutation> newResult = new();
 

@@ -21,7 +21,7 @@ public class Tests
     [TestCaseSource(nameof(SearchRange_TargetExist_ReturnsClosestSubarrayCases))]
     public void SearchRange_TargetExist_ReturnsClosestSubarray(TestData testData)
     {
-        var result = new Solution().SearchRange(testData.Nums, testData.Target);
+        int[] result = new Solution().SearchRange(testData.Nums, testData.Target);
 
         result.Should().BeEquivalentTo(testData.Expected);
     }

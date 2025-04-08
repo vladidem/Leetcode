@@ -7,12 +7,12 @@ public class Solution
 {
     public char NextGreatestLetter(char[] letters, char target)
     {
-        var left = 0;
-        var right = letters.Length - 1;
+        int left = 0;
+        int right = letters.Length - 1;
 
         while (left <= right)
         {
-            var mid = left + (right - left) / 2;
+            int mid = left + (right - left) / 2;
 
             if (target < letters[mid])
                 right = mid - 1;

@@ -16,7 +16,7 @@ public class Tests
     [TestCaseSource(nameof(HasPathSum_PathSumExists_ReturnsTrueCases))]
     public void HasPathSum_PathSumExists_ReturnsTrue(TestData testData)
     {
-        var result = new Solution().HasPathSum(TreeNode.FromArray(testData.Tree), testData.Sum);
+        bool result = new Solution().HasPathSum(TreeNode.FromArray(testData.Tree), testData.Sum);
 
         result.Should().BeTrue();
     }

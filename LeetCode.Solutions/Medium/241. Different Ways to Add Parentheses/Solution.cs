@@ -19,8 +19,8 @@ public class Solution
 
     public IEnumerable<int> DiffWaysToCompute(string expression, int left, int right)
     {
-        var hasOperations = false;
-        for (var i = left; i < right; i++)
+        bool hasOperations = false;
+        for (int i = left; i < right; i++)
         {
             var operation = operations.GetValueOrDefault(expression[i]);
             if (operation != null)
@@ -31,8 +31,10 @@ public class Solution
                 var combinations = leftPieces.SelectMany(
                     x => rightPieces,
                     (y, z) => operation(y, z));
-                foreach (var result in combinations)
+                foreach (int result in combinations)
+                {
                     yield return result;
+                }
             }
         }
 

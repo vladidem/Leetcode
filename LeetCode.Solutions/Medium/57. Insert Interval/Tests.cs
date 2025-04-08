@@ -40,7 +40,7 @@ public class Tests
     [TestCaseSource(nameof(InsertInterval_IntervalsEmpty_ReturnsNewCases))]
     public void InsertInterval_IntervalsEmpty_ReturnsNew(TestData testData)
     {
-        var result = new Solution().Insert(testData.Intervals, testData.NewInterval);
+        int[][] result = new Solution().Insert(testData.Intervals, testData.NewInterval);
 
         result.Should().BeEquivalentTo(testData.Expected);
     }
@@ -48,7 +48,7 @@ public class Tests
     [TestCaseSource(nameof(InsertInterval_IntervalsIntersect_ReturnsMergedCases))]
     public void InsertInterval_IntervalsIntersect_ReturnsMerged(TestData testData)
     {
-        var result = new Solution().Insert(testData.Intervals, testData.NewInterval);
+        int[][] result = new Solution().Insert(testData.Intervals, testData.NewInterval);
 
         result.Should().BeEquivalentTo(testData.Expected);
     }

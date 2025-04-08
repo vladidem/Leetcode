@@ -7,10 +7,11 @@ public class Solution
 {
     public IList<int> FindDuplicates(int[] nums)
     {
-        var i = 0;
+        int i = 0;
         var duplicates = new HashSet<int>();
 
         while (i < nums.Length)
+        {
             if (nums[i] != i + 1)
             {
                 if (nums[i] == nums[nums[i] - 1])
@@ -27,6 +28,7 @@ public class Solution
             {
                 i++;
             }
+        }
 
         return duplicates.ToList();
     }

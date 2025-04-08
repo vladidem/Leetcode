@@ -12,8 +12,8 @@ public class Solution
 
     public int[][] IntervalIntersectionTwoPointers(int[][] firstList, int[][] secondList)
     {
-        var i = 0;
-        var j = 0;
+        int i = 0;
+        int j = 0;
         var result = new List<int[]>();
         int[]? intersection;
 

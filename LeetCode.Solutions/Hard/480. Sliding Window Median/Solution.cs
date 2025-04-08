@@ -11,7 +11,7 @@ public class Solution
 
         var medianFinder = new MedianFinder();
         var result = new List<double>();
-        for (var i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++)
         {
             medianFinder.AddNum(nums[i]);
             if (i < k - 1)
@@ -61,21 +61,21 @@ public class Solution
         {
             if (_firstHalf.Count > _secondHalf.Count)
             {
-                var element = _firstHalf.Dequeue();
+                int element = _firstHalf.Dequeue();
                 _secondHalf.Enqueue(element, element);
             }
             else if (_firstHalf.Count == _secondHalf.Count && _firstHalf.Peek() > _secondHalf.Peek())
             {
-                var firstElement = _firstHalf.Dequeue();
+                int firstElement = _firstHalf.Dequeue();
                 _secondHalf.Enqueue(firstElement, firstElement);
 
-                var secondElement = _secondHalf.Dequeue();
+                int secondElement = _secondHalf.Dequeue();
                 _firstHalf.Enqueue(secondElement, secondElement);
             }
 
             while (_secondHalf.Count - _firstHalf.Count > 1)
             {
-                var element = _secondHalf.Dequeue();
+                int element = _secondHalf.Dequeue();
                 _firstHalf.Enqueue(element, element);
             }
         }

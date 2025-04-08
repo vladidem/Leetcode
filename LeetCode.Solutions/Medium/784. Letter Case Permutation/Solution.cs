@@ -11,7 +11,7 @@ public class Solution
     {
         IList<StringBuilder> permutations = [new(s)];
 
-        for (var i = 0; i < s.Length; i++)
+        for (int i = 0; i < s.Length; i++)
         {
             if (!char.IsLetter(s[i])) continue;
             IList<StringBuilder> newPermutations = [];

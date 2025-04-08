@@ -20,7 +20,7 @@ public class TreeNode
 
         List<TreeNode> level = [root];
         List<TreeNode> nextLevel = [];
-        var i = 1;
+        int i = 1;
         while (i < tree.Length)
         {
             foreach (var node in level)

@@ -23,15 +23,15 @@ public class MedianFinder
 
         if (_firstHalf.Count > _secondHalf.Count)
         {
-            var element = _firstHalf.Dequeue();
+            int element = _firstHalf.Dequeue();
             _secondHalf.Enqueue(element, element);
         }
         else if (_firstHalf.Count == _secondHalf.Count && _firstHalf.Peek() > _secondHalf.Peek())
         {
-            var firstElement = _firstHalf.Dequeue();
+            int firstElement = _firstHalf.Dequeue();
             _secondHalf.Enqueue(firstElement, firstElement);
 
-            var secondElement = _secondHalf.Dequeue();
+            int secondElement = _secondHalf.Dequeue();
             _firstHalf.Enqueue(secondElement, secondElement);
         }
     }

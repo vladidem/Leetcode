@@ -7,8 +7,8 @@ public class Solution
 {
     public bool IsHappy(int n)
     {
-        var slow = n;
-        var fast = n;
+        int slow = n;
+        int fast = n;
         while (slow != 1 && fast != 1)
         {
             slow = NextStep(slow);
@@ -21,7 +21,7 @@ public class Solution
 
     private int NextStep(int n)
     {
-        var result = 0;
+        int result = 0;
 
         while (n > 0)
         {

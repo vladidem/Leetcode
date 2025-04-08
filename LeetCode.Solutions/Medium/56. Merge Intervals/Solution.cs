@@ -10,12 +10,13 @@ public class Solution
         if (intervals.Length == 1)
             return intervals;
 
-        var sortedIntervals = intervals.OrderBy(i => i[0]).ToArray();
-        var start = sortedIntervals[0][0];
-        var end = sortedIntervals[0][1];
+        int[][] sortedIntervals = intervals.OrderBy(i => i[0]).ToArray();
+        int start = sortedIntervals[0][0];
+        int end = sortedIntervals[0][1];
         var result = new List<int[]>();
 
-        foreach (var interval in sortedIntervals)
+        foreach (int[] interval in sortedIntervals)
+        {
             if (interval[0] <= end)
             {
                 end = Math.Max(interval[1], end);
@@ -26,6 +27,7 @@ public class Solution
                 start = interval[0];
                 end = interval[1];
             }
+        }
 
         result.Add([start, end]);
 

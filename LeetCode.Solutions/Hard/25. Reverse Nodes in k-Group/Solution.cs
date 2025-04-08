@@ -12,16 +12,18 @@ public class Solution
         if (k == 1)
             return head;
 
-        foreach (var (left, right) in ReverseGroups(Length(head), k))
+        foreach ((int left, int right) in ReverseGroups(Length(head), k))
+        {
             head = ReverseBetween(head, left, right);
+        }
 
         return head;
     }
 
     private IEnumerable<(int left, int right)> ReverseGroups(int length, int k)
     {
-        var left = 1;
-        var right = left + k - 1;
+        int left = 1;
+        int right = left + k - 1;
 
         while (right <= length)
         {
@@ -33,7 +35,7 @@ public class Solution
 
     private int Length(ListNode head)
     {
-        var i = 1;
+        int i = 1;
         while (head != null)
         {
             head = head.next;
@@ -50,7 +52,7 @@ public class Solution
         if (left == right) return head;
         var current = head;
         ListNode? previous = null;
-        for (var i = 1; i < left; i++)
+        for (int i = 1; i < left; i++)
         {
             previous = current;
             current = current.next;
@@ -59,7 +61,7 @@ public class Solution
         var leftNode = current;
         var preLeftNode = previous;
 
-        for (var i = left; i < right; i++) current = current.next;
+        for (int i = left; i < right; i++) current = current.next;
 
         var rightNode = current;
         var postRightNode = current.next;

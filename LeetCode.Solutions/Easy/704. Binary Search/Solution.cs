@@ -14,7 +14,7 @@ public class Solution
     {
         if (left > right || (left == right && nums[left] != target))
             return -1;
-        var mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;
 
         if (nums[mid] == target) return mid;
 
@@ -26,12 +26,12 @@ public class Solution
 
     public int SearchIterative(int[] nums, int target)
     {
-        var left = 0;
-        var right = nums.Length - 1;
+        int left = 0;
+        int right = nums.Length - 1;
 
         while (left <= right)
         {
-            var mid = left + (right - left) / 2;
+            int mid = left + (right - left) / 2;
 
             if (nums[mid] == target) return mid;
             if (target < nums[mid])

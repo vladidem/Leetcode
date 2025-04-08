@@ -31,7 +31,7 @@ public class Solution
 
         while (stack.Count > 0)
         {
-            var (current, currentSum) = stack.Pop();
+            (var current, int currentSum) = stack.Pop();
 
             if (current.left != null)
                 stack.Push((current.left, currentSum + current.left.val));

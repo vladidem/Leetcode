@@ -14,10 +14,14 @@ public class Solution
         SortedDictionary<char, int> tChars = new();
 
         foreach (char c in s)
+        {
             sChars[c] = sChars.GetValueOrDefault(c, 0) + 1;
+        }
 
         foreach (char c in t)
+        {
             tChars[c] = tChars.GetValueOrDefault(c, 0) + 1;
+        }
 
         return sChars.SequenceEqual(tChars);
     }

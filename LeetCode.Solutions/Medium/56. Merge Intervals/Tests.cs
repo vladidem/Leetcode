@@ -19,7 +19,7 @@ public class Tests
     [TestCaseSource(nameof(MergeIntervals_IntervalsIntersect_ReturnsMergedCases))]
     public void MergeIntervals_IntervalsIntersect_ReturnsMerged(TestData testData)
     {
-        var result = new Solution().Merge(testData.Intervals);
+        int[][] result = new Solution().Merge(testData.Intervals);
 
         result.Should().BeEquivalentTo(testData.Expected);
     }

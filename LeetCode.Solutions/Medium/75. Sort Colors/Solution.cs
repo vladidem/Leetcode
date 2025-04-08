@@ -19,18 +19,22 @@ public class Solution
         int lastSorted = -1;
 
         for (int i = 0; i < nums.Length; i++)
+        {
             if (nums[i] == Red)
             {
                 lastSorted++;
                 (nums[i], nums[lastSorted]) = (nums[lastSorted], nums[i]);
             }
+        }
 
         for (int i = lastSorted + 1; i < nums.Length; i++)
+        {
             if (nums[i] == White)
             {
                 lastSorted++;
                 (nums[i], nums[lastSorted]) = (nums[lastSorted], nums[i]);
             }
+        }
     }
 
     public void SortColors1Pass(int[] nums)

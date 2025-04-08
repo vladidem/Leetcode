@@ -9,7 +9,8 @@ public class Solution
     {
         IList<IList<int>> sets = new List<IList<int>>();
         sets.Add([]);
-        for (var i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++)
+        {
             sets = sets.Concat(sets.Select(it =>
             {
                 var newList = new List<int>(it);
@@ -17,6 +18,7 @@ public class Solution
 
                 return newList;
             })).ToList();
+        }
 
         IList<IList<int>> result = new List<IList<int>>(sets.Select(it => it.ToList()));
 

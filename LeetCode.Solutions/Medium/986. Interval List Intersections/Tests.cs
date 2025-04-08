@@ -22,7 +22,7 @@ public class Tests
     [TestCaseSource(nameof(IntervalListIntersections_IntervalsIntersect_ReturnsIntersectionCases))]
     public void IntervalListIntersections_IntervalsIntersect_ReturnsIntersection(TestData testData)
     {
-        var result = new Solution().IntervalIntersection(testData.firstList, testData.secondList);
+        int[][] result = new Solution().IntervalIntersection(testData.firstList, testData.secondList);
 
         result.Should().BeEquivalentTo(testData.Expected);
     }

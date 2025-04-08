@@ -16,7 +16,7 @@ public class ListNode
         var result = new ListNode(nums[0]);
         var current = result;
 
-        for (var i = 1; i < nums.Length; i++)
+        for (int i = 1; i < nums.Length; i++)
         {
             current.next = new ListNode(nums[i]);
             current = current.next;
@@ -51,9 +51,11 @@ public class ListNode
     {
         var current = this;
 
-        for (var i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
+        {
             if (current.next != null)
                 current = current.next;
+        }
 
         return current;
     }

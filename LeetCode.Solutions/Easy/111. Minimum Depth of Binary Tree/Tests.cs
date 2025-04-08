@@ -20,7 +20,7 @@ public class Tests
     [TestCaseSource(nameof(BinaryTreeLevelOrder_NotEmpty_ReturnsLevelsCases))]
     public void BinaryTreeLevelOrder_NotEmpty_ReturnsLevels(TestData testData)
     {
-        var result = new Solution().MinDepth(TreeNode.FromArray(testData.Tree));
+        int result = new Solution().MinDepth(TreeNode.FromArray(testData.Tree));
 
         result.Should().Be(testData.Expected);
     }

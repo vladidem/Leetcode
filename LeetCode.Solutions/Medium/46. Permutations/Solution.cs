@@ -19,15 +19,17 @@ public class Solution
         IList<IList<int>> mutations = new List<IList<int>>();
         mutations.Add([nums[0]]);
 
-        for (var i = 1; i < nums.Length; i++)
+        for (int i = 1; i < nums.Length; i++)
+        {
             mutations = mutations.SelectMany(mutation => NewMutations(nums, nums[i], mutation)).ToList();
+        }
 
         return mutations;
     }
 
     private IEnumerable<IList<int>> NewMutations(int[] nums, int newNum, IList<int> mutation)
     {
-        for (var j = 0; j <= mutation.Count; j++)
+        for (int j = 0; j <= mutation.Count; j++)
         {
             IList<int> newMutation = new List<int>(mutation);
             newMutation.Insert(j, newNum);
