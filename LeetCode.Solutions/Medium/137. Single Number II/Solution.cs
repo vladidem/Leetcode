@@ -7,6 +7,11 @@ public class Solution
 {
     public int SingleNumber(int[] nums)
     {
+        return SingleNumberTwoNumbers(nums);
+    }
+
+    public int SingleNumberBitArray(int[] nums)
+    {
         var result = new TriBitNumber();
 
         for (int i = 0; i < nums.Length; i++)
@@ -15,6 +20,20 @@ public class Solution
         }
 
         return result.ToInt();
+    }
+
+    public int SingleNumberTwoNumbers(int[] nums)
+    {
+        int ones = 0;
+        int twos = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            ones ^= nums[i] & ~twos;
+            twos ^= nums[i] & ~ones;
+        }
+
+        return ones;
     }
 
     public class TriBitNumber
