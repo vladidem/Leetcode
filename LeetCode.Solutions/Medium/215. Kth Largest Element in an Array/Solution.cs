@@ -93,9 +93,9 @@ public class Solution
 
         private void Sink(int i)
         {
-            int? childToSwimUp = i;
+            int? childToSwimUp;
 
-            while (childToSwimUp != null)
+            do
             {
                 int childLeft = 2 * i + 1;
                 int childRight = 2 * i + 2;
@@ -118,7 +118,7 @@ public class Solution
                     (_heap[i], _heap[childToSwimUp.Value]) = (_heap[childToSwimUp.Value], _heap[i]);
                     i = childToSwimUp.Value;
                 }
-            }
+            } while (childToSwimUp != null);
         }
     }
 }
