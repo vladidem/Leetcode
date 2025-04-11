@@ -13,6 +13,8 @@ public class ListNode
 
     public static ListNode FromArray(int[] nums)
     {
+        if (nums.Length == 0) return null;
+
         var result = new ListNode(nums[0]);
         var current = result;
 
