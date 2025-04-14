@@ -7,6 +7,11 @@ public class Solution
 {
     public IList<int> FindClosestElements(int[] arr, int k, int x)
     {
+        return FindClosestElementsShrink(arr, k, x);
+    }
+
+    public IList<int> FindClosestElementsShrink(int[] arr, int k, int x)
+    {
         int left = 0;
         int right = arr.Length - 1;
 
@@ -22,12 +27,12 @@ public class Solution
 
         int rangeStart = Math.Max(0, left - k);
         int rangeEnd = Math.Min(arr.Length - 1, left + k);
-        while (rangeEnd - rangeStart < k)
+        while (rangeEnd - rangeStart >= k)
         {
             if (ACloserThanB(x, arr[rangeStart], arr[rangeEnd]))
-                rangeEnd++;
+                rangeEnd--;
             else
-                rangeStart--;
+                rangeStart++;
         }
 
         return arr[rangeStart..(rangeEnd + 1)];
