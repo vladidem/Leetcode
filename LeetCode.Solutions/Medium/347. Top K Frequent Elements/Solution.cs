@@ -1,7 +1,7 @@
 ﻿namespace LeetCode.Solutions.Medium._347_Top_K_Frequent_Elements;
 
 /// <summary>
-///     https://leetcode.com/problems/top-k-frequent-elements/description/
+///     https://leetcode.com/problems/top-k-frequent-elements/
 /// </summary>
 public class Solution
 {
