@@ -9,11 +9,37 @@ public class Solution
 
     public int FindTargetSumWays(int[] nums, int target)
     {
-        cache = new Dictionary<(ArraySegment<int>, int target), int>();
-        return FindTargetSumWays(new ArraySegment<int>(nums, 0, nums.Length), target);
+        return FindTargetSumWaysBottomUp(nums, target);
     }
 
-    public int FindTargetSumWays(ArraySegment<int> nums, int target)
+    public int FindTargetSumWaysBottomUp(int[] nums, int target)
+    {
+        var waysToSum = new Dictionary<int, Dictionary<int, int>>();
+        for (int i = -1; i <= nums.Length - 1; i++)
+        {
+            waysToSum[i] = new Dictionary<int, int>();
+        }
+
+        waysToSum[-1][0] = 1;
+        for (int i = 0; i <= nums.Length - 1; i++)
+        {
+            foreach ((int sum, int ways) in waysToSum[i - 1])
+            {
+                waysToSum[i][sum + nums[i]] = waysToSum[i].GetValueOrDefault(sum + nums[i], 0) + ways;
+                waysToSum[i][sum - nums[i]] = waysToSum[i].GetValueOrDefault(sum - nums[i], 0) + ways;
+            }
+        }
+
+        return waysToSum[nums.Length - 1].GetValueOrDefault(target, 0);
+    }
+
+    public int FindTargetSumWaysRecursive(int[] nums, int target)
+    {
+        cache = new Dictionary<(ArraySegment<int>, int target), int>();
+        return FindTargetSumWaysRecursive(new ArraySegment<int>(nums, 0, nums.Length), target);
+    }
+
+    public int FindTargetSumWaysRecursive(ArraySegment<int> nums, int target)
     {
         if (cache.TryGetValue((nums, target), out int cachedResult))
             return cachedResult;
@@ -23,8 +49,8 @@ public class Solution
 
         if (nums.Count == 0 && target != 0) return 0;
 
-        int result = FindTargetSumWays(nums[1..], target - nums[0])
-                     + FindTargetSumWays(nums[1..], target + nums[0]);
+        int result = FindTargetSumWaysRecursive(nums[1..], target - nums[0])
+                     + FindTargetSumWaysRecursive(nums[1..], target + nums[0]);
 
         cache[(nums, target)] = result;
 
