@@ -10,7 +10,34 @@ public class Solution
     public int CoinChange(int[] coins, int amount)
     {
         cache = new Dictionary<int, int>();
-        return CoinChangeRecursive(coins, amount);
+        return CoinChangeBottomUp(coins, amount);
+    }
+
+    private int CoinChangeBottomUp(int[] coins, int amount)
+    {
+        cache = new Dictionary<int, int>();
+        cache[0] = 0;
+        for (int i = 1; i <= amount; i++)
+        {
+            cache[i] = int.MaxValue;
+        }
+
+        for (int target = 1; target <= amount; target++)
+        {
+            for (int i = 0; i < coins.Length; i++)
+            {
+                if (target - coins[i] < 0)
+                    continue;
+
+                if (target - coins[i] >= 0
+                    && cache[target - coins[i]] < int.MaxValue)
+                {
+                    cache[target] = Math.Min(cache[target], cache[target - coins[i]] + 1);
+                }
+            }
+        }
+
+        return cache[amount] != int.MaxValue ? cache[amount] : -1;
     }
 
     private int CoinChangeRecursive(int[] coins, int amount)
