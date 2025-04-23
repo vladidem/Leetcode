@@ -1,0 +1,42 @@
+name: Unit Test With Coverage
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 9.0.*
+      - name: Install dotnet-coverage
+        run: dotnet tool install --global dotnet-coverage
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Test
+        run: dotnet test --results-directory "TestResults" --collect:"Code Coverage;Format=cobertura"
+      - name: Merge coverage
+        run: dotnet-coverage merge --output TestResults/coverage.cobertura.xml --output-format cobertura "TestResults/**/*"
+      - uses: actions/checkout@v2
+        with:
+          repository: vladidem/dotnet-code-coverage-badge
+          path: dotnet-code-coverage-badge
+      - name: Create Test Coverage Badge
+        uses: ./dotnet-code-coverage-badge
+        id: create_coverage_badge
+        with:
+          label: Unit Test Coverage
+          color: brightgreen
+          path: TestResults/coverage.cobertura.xml
+          gist-filename: code-coverage.json
+          gist-id: 9f01b7fe2751f41362d2e10ae0ca6959
+          gist-auth-token: ${{ secrets.GIST_AUTH_TOKEN }}
+      - name: Print code coverage
+        run: echo "Code coverage percentage ${{steps.create_coverage_badge.outputs.percentage}}%"
+      - name: Print badge data
+        run: echo "Badge data ${{steps.test_step.outputs.badge}}"
