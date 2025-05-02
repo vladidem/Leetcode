@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._16_3_Sum_Closest;
+﻿namespace Leetcode.Solutions.Medium._16._3Sum_Closest;
 
 /// <summary>
 ///     https://leetcode.com/problems/3sum-closest/
@@ -13,6 +13,7 @@ public class Solution
         for (int i = 0; i < sortedNums.Length - 2; i++)
         {
             if (i >= 1 && sortedNums[i] == sortedNums[i - 1]) continue;
+
             int right = nums.Length - 1;
             int left = i + 1;
 

@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Easy._977_Squares_Of_A_Sorted_Array;
+namespace Leetcode.Solutions.Easy._977._Squares_of_a_Sorted_Array;
 
 public class Tests
 {

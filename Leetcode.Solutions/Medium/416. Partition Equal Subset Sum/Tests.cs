@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._416_Partition_Equal_Subset_Sum;
+namespace Leetcode.Solutions.Medium._416._Partition_Equal_Subset_Sum;
 
 public class Tests
 {

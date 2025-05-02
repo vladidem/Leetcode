@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._416_Partition_Equal_Subset_Sum;
+﻿namespace Leetcode.Solutions.Medium._416._Partition_Equal_Subset_Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/partition-equal-subset-sum/
@@ -11,6 +11,7 @@ public class Solution
 
         int sum = nums.Sum();
         if (sum % 2 != 0) return false;
+
         sum /= 2;
 
         var possiblePartialSums = new HashSet<int> { 0 };
@@ -22,6 +23,7 @@ public class Solution
                 int newSum = partialSum + nums[i];
                 if (newSum == sum)
                     return true;
+
                 if (newSum < sum)
                     newSums.Add(newSum);
             }

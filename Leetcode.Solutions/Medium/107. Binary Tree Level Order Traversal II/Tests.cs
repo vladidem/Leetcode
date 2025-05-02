@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._107_Binary_Tree_Level_Order_Traversal_II;
+namespace Leetcode.Solutions.Medium._107._Binary_Tree_Level_Order_Traversal_II;
 
 public class Tests
 {
@@ -17,7 +17,7 @@ public class Tests
     [TestCaseSource(nameof(BinaryTreeLevelOrderBottom_NotEmpty_ReturnsLevelsCases))]
     public void BinaryTreeLevelOrderBottom_NotEmpty_ReturnsLevels(TestData testData)
     {
-        var result = new Solution().LevelOrderBottom(TreeNode.FromArray(testData.Tree));
+        var result = new Solution().LevelOrderBottom(TreeNode.FromArray(testData.Tree)!);
 
         result.Should().BeEquivalentTo(testData.Expected, options => options.WithStrictOrdering());
     }

@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._113_Path_Sum_II;
+namespace Leetcode.Solutions.Medium._113._Path_Sum_II;
 
 public class Tests
 {
@@ -17,7 +17,7 @@ public class Tests
     [TestCaseSource(nameof(PathSum_PathSumExists_ReturnsAllPathsCases))]
     public void PathSum_PathSumExists_ReturnsAllPaths(TestData testData)
     {
-        var result = new Solution().PathSum(TreeNode.FromArray(testData.Tree), testData.targetSum);
+        var result = new Solution().PathSum(TreeNode.FromArray(testData.Tree)!, testData.targetSum);
 
         result.Should().BeEquivalentTo(testData.result, options => options.WithStrictOrdering());
     }

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._217_Contains_Duplicate;
+﻿namespace Leetcode.Solutions.Easy._217._Contains_Duplicate;
 
 /// <summary>
 ///     https://leetcode.com/problems/contains-duplicate/

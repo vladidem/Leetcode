@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._784_Letter_Case_Permutation;
+namespace Leetcode.Solutions.Medium._784._Letter_Case_Permutation;
 
 public class Tests
 {

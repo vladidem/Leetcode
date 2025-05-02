@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._744_Find_Smallest_Letter_Greater_Than_Target;
+﻿namespace Leetcode.Solutions.Easy._744._Find_Smallest_Letter_Greater_Than_Target;
 
 /// <summary>
 ///     https://leetcode.com/problems/find-smallest-letter-greater-than-target/

@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._103_Binary_Tree_Zigzag_Level_Order_Traversal;
+namespace Leetcode.Solutions.Medium._103._Binary_Tree_Zigzag_Level_Order_Traversal;
 
 public class Tests
 {
@@ -17,7 +17,7 @@ public class Tests
     [TestCaseSource(nameof(BinaryTreeZigzagLevelOrder_NotEmpty_ReturnsLevelsCases))]
     public void BinaryTreeZigzagLevelOrder_NotEmpty_ReturnsLevels(TestData testData)
     {
-        var result = new Solution().ZigzagLevelOrder(TreeNode.FromArray(testData.Tree));
+        var result = new Solution().ZigzagLevelOrder(TreeNode.FromArray(testData.Tree)!);
 
         result.Should().BeEquivalentTo(testData.Expected, options => options.WithStrictOrdering());
     }

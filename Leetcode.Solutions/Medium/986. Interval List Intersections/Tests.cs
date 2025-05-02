@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._986_Interval_List_Intersections;
+namespace Leetcode.Solutions.Medium._986._Interval_List_Intersections;
 
 public class Tests
 {

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._209_Minimum_Size_Subarray_Sum;
+﻿namespace Leetcode.Solutions.Medium._209._Minimum_Size_Subarray_Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/minimum-size-subarray-sum/description/

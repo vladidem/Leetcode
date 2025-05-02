@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._202_Happy_Number;
+﻿namespace Leetcode.Solutions.Easy._202._Happy_Number;
 
 /// <summary>
 ///     https://leetcode.com/problems/happy-number/

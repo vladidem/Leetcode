@@ -1,33 +1,35 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._142_Linked_List_Cycle_II;
+namespace Leetcode.Solutions.Medium._142._Linked_List_Cycle_II;
 
 /// <summary>
 ///     https://leetcode.com/problems/linked-list-cycle-ii
 /// </summary>
 public class Solution
 {
-    public ListNode DetectCycle(ListNode head)
+    public ListNode? DetectCycle(ListNode? head)
     {
         return DetectCycleSlowFast(head);
     }
 
-    public ListNode DetectCycleHash(ListNode head)
+    public ListNode? DetectCycleHash(ListNode? head)
     {
         var nodes = new HashSet<ListNode>();
         var current = head;
         while (current != null)
         {
-            if (nodes.Contains(current)) return current;
-            nodes.Add(current);
+            if (!nodes.Add(current)) return current;
+
             current = current.next;
         }
 
         return null;
     }
 
-    public ListNode DetectCycleSlowFast(ListNode head)
+    public ListNode? DetectCycleSlowFast(ListNode? head)
     {
+        if (head == null) return null;
+
         var slow = head;
         var fast = head;
         if (!FindCycle(ref slow, ref fast))
@@ -36,7 +38,7 @@ public class Solution
         return GetCycleStart(head, slow);
     }
 
-    private bool FindCycle(ref ListNode slow, ref ListNode fast)
+    private bool FindCycle(ref ListNode? slow, ref ListNode? fast)
     {
         while (fast?.next?.next != null)
         {
@@ -48,7 +50,7 @@ public class Solution
         return false;
     }
 
-    private ListNode GetCycleStart(ListNode head, ListNode fastAndSlowMeeting)
+    private static ListNode GetCycleStart(ListNode head, ListNode? fastAndSlowMeeting)
     {
         var slow = head;
         var alsoSlow = fastAndSlowMeeting;

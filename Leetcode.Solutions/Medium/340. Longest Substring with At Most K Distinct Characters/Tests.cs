@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Medium._340_Longest_Substring_With_At_Most_K_Distinct_Characters;
+namespace Leetcode.Solutions.Medium._340._Longest_Substring_with_At_Most_K_Distinct_Characters;
 
 public class Tests
 {

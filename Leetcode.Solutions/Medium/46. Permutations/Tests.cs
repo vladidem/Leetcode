@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._46_Permutations;
+namespace Leetcode.Solutions.Medium._46._Permutations;
 
 public class Tests
 {

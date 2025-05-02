@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._198_House_Robber;
+﻿namespace Leetcode.Solutions.Medium._198._House_Robber;
 
 /// <summary>
 ///     https://leetcode.com/problems/house-robber/

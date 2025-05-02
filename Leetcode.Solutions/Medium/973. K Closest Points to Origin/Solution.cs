@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace LeetCode.Solutions.Medium._973_K_Closest_Points_to_Origin;
+namespace Leetcode.Solutions.Medium._973._K_Closest_Points_to_Origin;
 
 /// <summary>
 ///     https://leetcode.com/problems/k-closest-points-to-origin/
@@ -104,6 +104,7 @@ public class Solution
                 bool hasLeftChild = _heap.Count - 1 >= childLeft;
                 bool hasRightChild = _heap.Count - 1 >= childRight;
                 if (!hasLeftChild && !hasRightChild) return;
+
                 childToSwimUp = null;
 
                 if (_comparer.Compare(_heap[childLeft].Priority, _heap[i].Priority) > 0

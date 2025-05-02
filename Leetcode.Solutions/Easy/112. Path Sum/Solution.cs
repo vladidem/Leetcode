@@ -1,18 +1,18 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._112_Path_Sum;
+namespace Leetcode.Solutions.Easy._112._Path_Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/path-sum/
 /// </summary>
 public class Solution
 {
-    public bool HasPathSum(TreeNode root, int targetSum)
+    public bool HasPathSum(TreeNode? root, int targetSum)
     {
         return HasPathSumIterative(root, targetSum);
     }
 
-    private bool HasPathSumRecursive(TreeNode node, int targetSum, int currentSum = 0)
+    private bool HasPathSumRecursive(TreeNode? node, int targetSum, int currentSum = 0)
     {
         if (node == null) return false;
 
@@ -23,9 +23,10 @@ public class Solution
                || HasPathSumRecursive(node.left, targetSum, currentSum + node.val);
     }
 
-    public bool HasPathSumIterative(TreeNode root, int targetSum)
+    public bool HasPathSumIterative(TreeNode? root, int targetSum)
     {
         if (root == null) return false;
+
         var stack = new Stack<(TreeNode, int)>();
         stack.Push((root, root.val));
 

@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Medium._260_Single_Number_III;
+namespace Leetcode.Solutions.Medium._260._Single_Number_III;
 
 public class Tests
 {

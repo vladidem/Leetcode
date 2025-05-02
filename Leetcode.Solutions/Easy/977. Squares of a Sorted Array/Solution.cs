@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._977_Squares_Of_A_Sorted_Array;
+﻿namespace Leetcode.Solutions.Easy._977._Squares_of_a_Sorted_Array;
 
 /// <summary>
 ///     https://leetcode.com/problems/squares-of-a-sorted-array/
@@ -25,14 +25,14 @@ public class Solution
         for (int i = 0; i <= nums.Length - 1; i++)
         {
             if (right > nums.Length - 1
-                || (left >= 0 && (int)Math.Pow(nums[left], 2) <= (int)Math.Pow(nums[right], 2)))
+                || (left >= 0 && (int) Math.Pow(nums[left], 2) <= (int) Math.Pow(nums[right], 2)))
             {
-                result[i] = (int)Math.Pow(nums[left], 2);
+                result[i] = (int) Math.Pow(nums[left], 2);
                 left--;
             }
             else
             {
-                result[i] = (int)Math.Pow(nums[right], 2);
+                result[i] = (int) Math.Pow(nums[right], 2);
                 right++;
             }
         }

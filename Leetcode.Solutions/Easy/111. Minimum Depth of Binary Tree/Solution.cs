@@ -1,15 +1,16 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._111_Minimum_Depth_of_Binary_Tree;
+namespace Leetcode.Solutions.Easy._111._Minimum_Depth_of_Binary_Tree;
 
 /// <summary>
 ///     https://leetcode.com/problems/minimum-depth-of-binary-tree/
 /// </summary>
 public class Solution
 {
-    public int MinDepth(TreeNode root)
+    public int MinDepth(TreeNode? root)
     {
         if (root == null) return 0;
+
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         int depth = 1;

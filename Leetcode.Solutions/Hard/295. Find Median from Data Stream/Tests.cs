@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Hard._295_Find_Median_from_Data_Stream;
+namespace Leetcode.Solutions.Hard._295._Find_Median_from_Data_Stream;
 
 public class Tests
 {

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._322_Coin_Change;
+﻿namespace Leetcode.Solutions.Medium._322._Coin_Change;
 
 /// <summary>
 ///     https://leetcode.com/problems/coin-change/

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._424_Longest_Repeating_Character_Replacement;
+﻿namespace Leetcode.Solutions.Medium._424._Longest_Repeating_Character_Replacement;
 
 /// <summary>
 ///     https://leetcode.com/problems/longest-repeating-character-replacement/description/

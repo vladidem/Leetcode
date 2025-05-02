@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._347_Top_K_Frequent_Elements;
+﻿namespace Leetcode.Solutions.Medium._347._Top_K_Frequent_Elements;
 
 /// <summary>
 ///     https://leetcode.com/problems/top-k-frequent-elements/

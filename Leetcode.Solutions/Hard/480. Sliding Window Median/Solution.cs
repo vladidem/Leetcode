@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Hard._480_Sliding_Window_Median;
+﻿namespace Leetcode.Solutions.Hard._480._Sliding_Window_Median;
 
 /// <summary>
 ///     https://leetcode.com/problems/sliding-window-median/
@@ -7,7 +7,7 @@ public class Solution
 {
     public double[] MedianSlidingWindow(int[] nums, int k)
     {
-        if (k == 1) return nums.Select(it => (double)it).ToArray();
+        if (k == 1) return nums.Select(it => (double) it).ToArray();
 
         var medianFinder = new MedianFinder();
         var result = new List<double>();
@@ -83,7 +83,7 @@ public class Solution
         public double FindMedian()
         {
             if (_firstHalf.Count == _secondHalf.Count)
-                return (double)_firstHalf.Peek() / 2 + (double)_secondHalf.Peek() / 2;
+                return (double) _firstHalf.Peek() / 2 + (double) _secondHalf.Peek() / 2;
 
             return _secondHalf.Peek();
         }

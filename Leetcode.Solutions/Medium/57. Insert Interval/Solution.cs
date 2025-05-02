@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._57_Insert_Interval;
+﻿namespace Leetcode.Solutions.Medium._57._Insert_Interval;
 
 /// <summary>
 ///     https://leetcode.com/problems/insert-interval/

@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._129_Sum_Root_to_Leaf_Numbers;
+namespace Leetcode.Solutions.Medium._129._Sum_Root_to_Leaf_Numbers;
 
 public class Tests
 {

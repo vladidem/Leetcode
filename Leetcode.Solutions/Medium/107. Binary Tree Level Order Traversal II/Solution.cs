@@ -1,6 +1,6 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._107_Binary_Tree_Level_Order_Traversal_II;
+namespace Leetcode.Solutions.Medium._107._Binary_Tree_Level_Order_Traversal_II;
 
 /// <summary>
 ///     https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
@@ -11,6 +11,7 @@ public class Solution
     {
         IList<IList<int>> result = new List<IList<int>>();
         if (root == null) return result;
+
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
 

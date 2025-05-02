@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._268_Missing_Number;
+﻿namespace Leetcode.Solutions.Easy._268._Missing_Number;
 
 /// <summary>
 ///     https://leetcode.com/problems/missing-number/

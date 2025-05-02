@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._658_Find_K_Closest_Elements;
+namespace Leetcode.Solutions.Medium._658._Find_K_Closest_Elements;
 
 public class Tests
 {

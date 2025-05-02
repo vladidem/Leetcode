@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Easy._26_Remove_Duplicates_From_Sorted_Array;
+namespace Leetcode.Solutions.Easy._26._Remove_Duplicates_from_Sorted_Array;
 
 public class Tests
 {

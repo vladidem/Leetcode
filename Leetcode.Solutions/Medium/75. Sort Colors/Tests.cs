@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._75_Sort_Colors;
+namespace Leetcode.Solutions.Medium._75._Sort_Colors;
 
 public class Tests
 {

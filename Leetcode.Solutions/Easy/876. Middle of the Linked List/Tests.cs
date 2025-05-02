@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._876_Middle_of_the_Linked_List;
+namespace Leetcode.Solutions.Easy._876._Middle_of_the_Linked_List;
 
 public class Tests
 {
@@ -10,7 +10,7 @@ public class Tests
     [TestCase(new[] { 3, 4, 2, 8, 7 })]
     public void MiddleNode_OddNodes_ReturnsMiddle(int[] nums)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
         int middleIndex = (int) Math.Ceiling((double) (nums.Length - 1) / 2);
         var middleNode = head.Nth(middleIndex);
 
@@ -24,7 +24,7 @@ public class Tests
     {
         var head = ListNode.FromArray(nums);
         int middleIndex = (int) Math.Ceiling((double) (nums.Length - 1) / 2);
-        var middleNode = head.Nth(middleIndex);
+        var middleNode = head!.Nth(middleIndex);
 
         new Solution().MiddleNode(head).Should().Be(middleNode);
     }

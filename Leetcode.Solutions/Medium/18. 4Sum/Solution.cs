@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._18_4_Sum;
+﻿namespace Leetcode.Solutions.Medium._18._4Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/4sum/

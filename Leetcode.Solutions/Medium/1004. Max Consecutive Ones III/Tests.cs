@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._1004_Max_Consecutive_Ones_III;
+namespace Leetcode.Solutions.Medium._1004._Max_Consecutive_Ones_III;
 
 public class Tests
 {

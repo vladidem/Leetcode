@@ -1,6 +1,6 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._103_Binary_Tree_Zigzag_Level_Order_Traversal;
+namespace Leetcode.Solutions.Medium._103._Binary_Tree_Zigzag_Level_Order_Traversal;
 
 /// <summary>
 ///     https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
@@ -11,6 +11,7 @@ public class Solution
     {
         IList<IList<int>> result = new List<IList<int>>();
         if (root == null) return result;
+
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         int depth = 1;

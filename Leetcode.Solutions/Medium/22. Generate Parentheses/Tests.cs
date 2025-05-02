@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._22_Generate_Parentheses;
+namespace Leetcode.Solutions.Medium._22._Generate_Parentheses;
 
 public class Tests
 {

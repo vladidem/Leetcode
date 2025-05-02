@@ -1,21 +1,22 @@
-﻿namespace LeetCode.Solutions.DataStructures;
+﻿namespace Leetсode.Solutions.DataStructures;
 
 public class TreeNode
 {
-    public TreeNode left;
-    public TreeNode right;
+    public TreeNode? left;
+    public TreeNode? right;
     public int val;
 
-    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+    public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
     {
         this.val = val;
         this.left = left;
         this.right = right;
     }
 
-    public static TreeNode FromArray(int?[] tree)
+    public static TreeNode? FromArray(int?[] tree)
     {
         if (tree.Length == 0 || tree[0] == null) return null;
+
         var root = new TreeNode(tree[0]!.Value);
 
         List<TreeNode> level = [root];
@@ -27,7 +28,7 @@ public class TreeNode
             {
                 if (i < tree.Length && tree[i] != null)
                 {
-                    node.left = new TreeNode(tree[i].Value);
+                    node.left = new TreeNode(tree[i]!.Value);
                     nextLevel.Add(node.left);
                 }
 
@@ -35,7 +36,7 @@ public class TreeNode
 
                 if (i < tree.Length && tree[i] != null)
                 {
-                    node.right = new TreeNode(tree[i].Value);
+                    node.right = new TreeNode(tree[i]!.Value);
                     nextLevel.Add(node.right);
                 }
 

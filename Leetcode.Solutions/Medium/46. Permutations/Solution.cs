@@ -1,6 +1,6 @@
 ﻿using System.Collections.Immutable;
 
-namespace LeetCode.Solutions.Medium._46_Permutations;
+namespace Leetcode.Solutions.Medium._46._Permutations;
 
 /// <summary>
 ///     https://leetcode.com/problems/permutations/
@@ -16,6 +16,7 @@ public class Solution
     {
         if (nums.Length == 0)
             return [];
+
         IList<IList<int>> mutations = new List<IList<int>>();
         mutations.Add([nums[0]]);
 
@@ -40,6 +41,7 @@ public class Solution
     public IEnumerable<IList<int>> PermuteRecursive(int[] nums, ImmutableHashSet<int> visited, IList<int> path)
     {
         if (path.Count == nums.Length) return [path];
+
         return nums.Where(it => !visited.Contains(it)).SelectMany(it =>
         {
             IList<int> newPath = new List<int>(path);

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._713_Subarray_Product_Less_Than_K;
+﻿namespace Leetcode.Solutions.Medium._713._Subarray_Product_Less_Than_K;
 
 /// <summary>
 ///     https://leetcode.com/problems/subarray-product-less-than-k/

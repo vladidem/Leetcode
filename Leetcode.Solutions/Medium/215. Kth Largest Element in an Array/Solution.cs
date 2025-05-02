@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._215_Kth_Largest_Element_in_an_Array;
+﻿namespace Leetcode.Solutions.Medium._215._Kth_Largest_Element_in_an_Array;
 
 /// <summary>
 ///     https://leetcode.com/problems/kth-largest-element-in-an-array/
@@ -102,6 +102,7 @@ public class Solution
                 bool hasLeftChild = _heap.Count - 1 >= childLeft;
                 bool hasRightChild = _heap.Count - 1 >= childRight;
                 if (!hasLeftChild && !hasRightChild) return;
+
                 childToSwimUp = null;
 
                 if (_heap[childLeft] < _heap[i]

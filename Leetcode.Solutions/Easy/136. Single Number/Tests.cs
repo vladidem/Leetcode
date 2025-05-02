@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Easy._136_Single_Number;
+namespace Leetcode.Solutions.Easy._136._Single_Number;
 
 public class Tests
 {

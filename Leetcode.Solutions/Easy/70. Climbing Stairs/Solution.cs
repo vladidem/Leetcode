@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._70_Climbing_Stairs;
+﻿namespace Leetcode.Solutions.Easy._70._Climbing_Stairs;
 
 /// <summary>
 ///     https://leetcode.com/problems/climbing-stairs/

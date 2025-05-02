@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._78_Subsets;
+namespace Leetcode.Solutions.Medium._78._Subsets;
 
 public class Tests
 {

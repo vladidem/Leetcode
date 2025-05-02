@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._49_Group_Anagrams;
+namespace Leetcode.Solutions.Medium._49._Group_Anagrams;
 
 public class Tests
 {

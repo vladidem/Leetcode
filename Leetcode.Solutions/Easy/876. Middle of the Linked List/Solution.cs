@@ -1,13 +1,13 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._876_Middle_of_the_Linked_List;
+namespace Leetcode.Solutions.Easy._876._Middle_of_the_Linked_List;
 
 /// <summary>
 ///     https://leetcode.com/problems/middle-of-the-linked-list/
 /// </summary>
 public class Solution
 {
-    public ListNode MiddleNode(ListNode head)
+    public ListNode? MiddleNode(ListNode? head)
     {
         if (head == null) return null;
 

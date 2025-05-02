@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._704_Binary_Search;
+﻿namespace Leetcode.Solutions.Easy._704._Binary_Search;
 
 /// <summary>
 ///     https://leetcode.com/problems/binary-search/
@@ -14,6 +14,7 @@ public class Solution
     {
         if (left > right || (left == right && nums[left] != target))
             return -1;
+
         int mid = left + (right - left) / 2;
 
         if (nums[mid] == target) return mid;
@@ -34,6 +35,7 @@ public class Solution
             int mid = left + (right - left) / 2;
 
             if (nums[mid] == target) return mid;
+
             if (target < nums[mid])
                 right = mid - 1;
             else

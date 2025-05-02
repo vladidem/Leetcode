@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._112_Path_Sum;
+namespace Leetcode.Solutions.Easy._112._Path_Sum;
 
 public class Tests
 {

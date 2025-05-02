@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Medium._16_3_Sum_Closest;
+namespace Leetcode.Solutions.Medium._16._3Sum_Closest;
 
 public class Tests
 {

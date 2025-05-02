@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._75_Sort_Colors;
+﻿namespace Leetcode.Solutions.Medium._75._Sort_Colors;
 
 /// <summary>
 ///     https://leetcode.com/problems/sort-colors/

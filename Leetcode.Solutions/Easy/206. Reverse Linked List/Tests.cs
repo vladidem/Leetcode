@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._206_Reverse_Linked_List;
+namespace Leetcode.Solutions.Easy._206._Reverse_Linked_List;
 
 public class Tests
 {
@@ -10,7 +10,7 @@ public class Tests
     [TestCase(new[] { 3, 3 })]
     public void ReverseList_ListNotEmpty_ReturnsReversedList(int[] nums)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
 
         new Solution().ReverseList(head)
             .ToArray()

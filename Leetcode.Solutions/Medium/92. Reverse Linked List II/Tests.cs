@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._92_Reverse_Linked_List_II;
+namespace Leetcode.Solutions.Medium._92._Reverse_Linked_List_II;
 
 public class Tests
 {
@@ -12,9 +12,9 @@ public class Tests
         int right,
         int[] expected)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
 
-        new Solution().ReverseBetween(head, left, right)
+        new Solution().ReverseBetween(head, left, right)!
             .ToArray()
             .Should()
             .BeEquivalentTo(expected, opt => opt.WithStrictOrdering());
@@ -28,9 +28,9 @@ public class Tests
         int right,
         int[] expected)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
 
-        new Solution().ReverseBetween(head, left, right)
+        new Solution().ReverseBetween(head, left, right)!
             .ToArray()
             .Should()
             .BeEquivalentTo(expected, opt => opt.WithStrictOrdering());

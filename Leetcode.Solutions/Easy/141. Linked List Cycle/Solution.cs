@@ -1,13 +1,13 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._141_Linked_List_Cycle;
+namespace Leetcode.Solutions.Easy._141._Linked_List_Cycle;
 
 /// <summary>
 ///     https://leetcode.com/problems/linked-list-cycle/
 /// </summary>
 public class Solution
 {
-    public bool HasCycle(ListNode head)
+    public bool HasCycle(ListNode? head)
     {
         var slow = head;
         var fast = head?.next;

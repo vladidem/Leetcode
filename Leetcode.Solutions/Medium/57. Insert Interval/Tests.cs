@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._57_Insert_Interval;
+namespace Leetcode.Solutions.Medium._57._Insert_Interval;
 
 public class Tests
 {

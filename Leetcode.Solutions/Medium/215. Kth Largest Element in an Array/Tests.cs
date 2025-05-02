@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Medium._215_Kth_Largest_Element_in_an_Array;
+namespace Leetcode.Solutions.Medium._215._Kth_Largest_Element_in_an_Array;
 
 public class Tests
 {

@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._241_Different_Ways_to_Add_Parentheses;
+﻿namespace Leetcode.Solutions.Medium._241._Different_Ways_to_Add_Parentheses;
 
 /// <summary>
 ///     https://leetcode.com/problems/different-ways-to-add-parentheses/

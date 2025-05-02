@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._34_Find_First_and_Last_Position_of_Element_in_Sorted_Array;
+﻿namespace Leetcode.Solutions.Medium._34._Find_First_and_Last_Position_of_Element_in_Sorted_Array;
 
 /// <summary>
 ///     https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/

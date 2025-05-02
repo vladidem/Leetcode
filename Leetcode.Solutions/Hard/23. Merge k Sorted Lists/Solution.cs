@@ -1,19 +1,20 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Hard._23_Merge_k_Sorted_Lists;
+namespace Leetcode.Solutions.Hard._23._Merge_k_Sorted_Lists;
 
 /// <summary>
 ///     https://leetcode.com/problems/merge-k-sorted-lists/
 /// </summary>
 public class Solution
 {
-    public ListNode MergeKLists(ListNode[] lists)
+    public ListNode? MergeKLists(ListNode?[] lists)
     {
         var minHeap = new PriorityQueue<ListNode, int>(Comparer<int>.Create((x, y) => x.CompareTo(y)));
 
         foreach (var list in lists)
         {
             if (list == null) continue;
+
             minHeap.Enqueue(list, list.val);
         }
 
@@ -35,9 +36,10 @@ public class Solution
         return FromArray(newList.ToArray());
     }
 
-    private static ListNode FromArray(int[] nums)
+    private static ListNode? FromArray(int[] nums)
     {
         if (nums.Length == 0) return null;
+
         var result = new ListNode(nums[0]);
         var current = result;
 

@@ -1,7 +1,8 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetcode.Solutions.Hard._23._Merge_k_Sorted_Lists;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Hard._23_Merge_k_Sorted_Lists;
+namespace Leetсode.Solutions.Hard._23_Merge_k_Sorted_Lists;
 
 public class Tests
 {
@@ -28,7 +29,7 @@ public class Tests
     [TestCaseSource(nameof(MergeKLists_SortedLists_ReturnsMergedCases))]
     public void MergeKLists_SortedLists_ReturnsMerged(TestData testData)
     {
-        var result = new Solution().MergeKLists(testData.Lists.Select(ListNode.FromArray).ToArray());
+        var result = new Solution().MergeKLists(testData.Lists.Select(ListNode.FromArray).ToArray())!;
 
         result.ToArray().Should().BeEquivalentTo(testData.Result, options => options.WithStrictOrdering());
     }

@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Easy._704_Binary_Search;
+namespace Leetcode.Solutions.Easy._704._Binary_Search;
 
 public class Tests
 {

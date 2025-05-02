@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._260_Single_Number_III;
+﻿namespace Leetcode.Solutions.Medium._260._Single_Number_III;
 
 /// <summary>
 ///     https://leetcode.com/problems/single-number-iii/

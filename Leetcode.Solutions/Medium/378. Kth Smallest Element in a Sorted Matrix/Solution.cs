@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._378_Kth_Smallest_Element_in_a_Sorted_Matrix;
+﻿namespace Leetcode.Solutions.Medium._378._Kth_Smallest_Element_in_a_Sorted_Matrix;
 
 /// <summary>
 ///     https://leetcode.com/problems/merge-k-sorted-lists/

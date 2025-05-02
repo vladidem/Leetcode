@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._904_Fruit_Into_Baskets;
+﻿namespace Leetcode.Solutions.Medium._904._Fruit_Into_Baskets;
 
 /// <summary>
 ///     https://leetcode.com/problems/fruit-into-baskets/

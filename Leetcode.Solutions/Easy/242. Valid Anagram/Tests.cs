@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Easy._242_Valid_Anagram;
+namespace Leetcode.Solutions.Easy._242._Valid_Anagram;
 
 public class Tests
 {

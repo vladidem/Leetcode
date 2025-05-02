@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._15_3_Sum;
+﻿namespace Leetcode.Solutions.Medium._15._3Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/3sum/

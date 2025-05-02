@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Easy.Cyclic_Sort;
+namespace Leetcode.Solutions.Easy.Cyclic_Sort;
 
 public class Tests
 {

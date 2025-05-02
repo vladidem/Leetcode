@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._973_K_Closest_Points_to_Origin;
+namespace Leetcode.Solutions.Medium._973._K_Closest_Points_to_Origin;
 
 public class Tests
 {

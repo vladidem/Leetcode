@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.Medium._238_Product_of_Array_Except_Self;
+namespace Leetcode.Solutions.Medium._238._Product_of_Array_Except_Self;
 
 public class Tests
 {

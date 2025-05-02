@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._78_Subsets;
+﻿namespace Leetcode.Solutions.Medium._78._Subsets;
 
 /// <summary>
 ///     https://leetcode.com/problems/subsets/

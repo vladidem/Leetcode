@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._111_Minimum_Depth_of_Binary_Tree;
+namespace Leetcode.Solutions.Easy._111._Minimum_Depth_of_Binary_Tree;
 
 public class Tests
 {

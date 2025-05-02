@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._852_Peak_Index_in_a_Mountain_Array;
+namespace Leetcode.Solutions.Medium._852._Peak_Index_in_a_Mountain_Array;
 
 public class Tests
 {

@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Hard._632_Smallest_Range_Covering_Elements_from_K_Lists;
+namespace Leetcode.Solutions.Hard._632._Smallest_Range_Covering_Elements_from_K_Lists;
 
 public class Tests
 {

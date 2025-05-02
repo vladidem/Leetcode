@@ -1,13 +1,13 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Hard._25_Reverse_Nodes_in_k_Group;
+namespace Leetcode.Solutions.Hard._25._Reverse_Nodes_in_k_Group;
 
 /// <summary>
 ///     https://leetcode.com/problems/reverse-nodes-in-k-group/
 /// </summary>
 public class Solution
 {
-    public ListNode ReverseKGroup(ListNode head, int k)
+    public ListNode? ReverseKGroup(ListNode? head, int k)
     {
         if (k == 1)
             return head;
@@ -28,12 +28,13 @@ public class Solution
         while (right <= length)
         {
             yield return (left, right);
+
             left = right + 1;
             right = left + k - 1;
         }
     }
 
-    private int Length(ListNode head)
+    private int Length(ListNode? head)
     {
         int i = 1;
         while (head != null)
@@ -47,35 +48,39 @@ public class Solution
         return i;
     }
 
-    private ListNode ReverseBetween(ListNode head, int left, int right)
+    private ListNode? ReverseBetween(ListNode? head, int left, int right)
     {
         if (left == right) return head;
+
         var current = head;
         ListNode? previous = null;
         for (int i = 1; i < left; i++)
         {
             previous = current;
-            current = current.next;
+            current = current?.next;
         }
 
         var leftNode = current;
         var preLeftNode = previous;
 
-        for (int i = left; i < right; i++) current = current.next;
+        for (int i = left; i < right; i++)
+        {
+            current = current?.next;
+        }
 
         var rightNode = current;
-        var postRightNode = current.next;
+        var postRightNode = current!.next;
 
         current = leftNode;
         while (current != postRightNode)
         {
-            var next = current.next;
+            var next = current!.next;
             current.next = previous;
             previous = current;
             current = next;
         }
 
-        leftNode.next = postRightNode;
+        leftNode!.next = postRightNode;
         if (preLeftNode != null)
             preLeftNode.next = rightNode;
         else

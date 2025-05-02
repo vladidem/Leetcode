@@ -1,4 +1,4 @@
-namespace LeetCode.Solutions.DataStructures;
+namespace Leetсode.Solutions.DataStructures;
 
 public class ListNode
 {
@@ -11,7 +11,7 @@ public class ListNode
         next = null;
     }
 
-    public static ListNode FromArray(int[] nums)
+    public static ListNode? FromArray(int[] nums)
     {
         if (nums.Length == 0) return null;
 

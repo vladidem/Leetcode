@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._852_Peak_Index_in_a_Mountain_Array;
+﻿namespace Leetcode.Solutions.Medium._852._Peak_Index_in_a_Mountain_Array;
 
 /// <summary>
 ///     https://leetcode.com/problems/peak-index-in-a-mountain-array/
@@ -17,6 +17,7 @@ public class Solution
             if (IsAscending(arr, mid - 1, mid)
                 && IsDescending(arr, mid, mid + 1))
                 return mid;
+
             if (IsAscending(arr, mid, mid + 1))
                 left = mid + 1;
             else

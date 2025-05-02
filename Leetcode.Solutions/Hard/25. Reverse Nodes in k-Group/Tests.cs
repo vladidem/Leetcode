@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Hard._25_Reverse_Nodes_in_k_Group;
+namespace Leetcode.Solutions.Hard._25._Reverse_Nodes_in_k_Group;
 
 public class Tests
 {
@@ -13,7 +13,7 @@ public class Tests
     {
         var head = ListNode.FromArray(nums);
 
-        new Solution().ReverseKGroup(head, k)
+        new Solution().ReverseKGroup(head, k)!
             .ToArray()
             .Should()
             .BeEquivalentTo(expected, opt => opt.WithStrictOrdering());
@@ -28,7 +28,7 @@ public class Tests
     {
         var head = ListNode.FromArray(nums);
 
-        new Solution().ReverseKGroup(head, k)
+        new Solution().ReverseKGroup(head, k)!
             .ToArray()
             .Should()
             .BeEquivalentTo(expected, opt => opt.WithStrictOrdering());

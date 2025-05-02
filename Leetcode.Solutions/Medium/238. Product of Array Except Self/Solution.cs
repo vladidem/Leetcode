@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._238_Product_of_Array_Except_Self;
+﻿namespace Leetcode.Solutions.Medium._238._Product_of_Array_Except_Self;
 
 /// <summary>
 ///     https://leetcode.com/problems/product-of-array-except-self/

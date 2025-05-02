@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._451_Sort_Characters_By_Frequency;
+namespace Leetcode.Solutions.Medium._451._Sort_Characters_By_Frequency;
 
 public class Tests
 {

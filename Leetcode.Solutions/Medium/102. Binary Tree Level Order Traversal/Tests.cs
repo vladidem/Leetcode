@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._102_Binary_Tree_Level_Order_Traversal;
+namespace Leetcode.Solutions.Medium._102._Binary_Tree_Level_Order_Traversal;
 
 public class Tests
 {

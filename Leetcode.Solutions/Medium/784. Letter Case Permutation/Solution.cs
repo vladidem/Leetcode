@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LeetCode.Solutions.Medium._784_Letter_Case_Permutation;
+namespace Leetcode.Solutions.Medium._784._Letter_Case_Permutation;
 
 /// <summary>
 ///     https://leetcode.com/problems/letter-case-permutation/
@@ -14,6 +14,7 @@ public class Solution
         for (int i = 0; i < s.Length; i++)
         {
             if (!char.IsLetter(s[i])) continue;
+
             IList<StringBuilder> newPermutations = [];
 
             foreach (var permutation in permutations)

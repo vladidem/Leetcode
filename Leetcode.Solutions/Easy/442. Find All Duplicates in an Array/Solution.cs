@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Easy._448_Find_All_Duplicates_in_an_Array;
+﻿namespace Leetcode.Solutions.Easy._442._Find_All_Duplicates_in_an_Array;
 
 /// <summary>
 ///     https://leetcode.com/problems/find-all-duplicates-in-an-array/

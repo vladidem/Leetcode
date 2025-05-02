@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._56_Merge_Intervals;
+namespace Leetcode.Solutions.Medium._56._Merge_Intervals;
 
 public class Tests
 {

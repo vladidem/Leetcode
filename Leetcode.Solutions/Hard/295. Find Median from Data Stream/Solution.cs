@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Hard._295_Find_Median_from_Data_Stream;
+﻿namespace Leetcode.Solutions.Hard._295._Find_Median_from_Data_Stream;
 
 /// <summary>
 ///     https://leetcode.com/problems/find-median-from-data-stream/
@@ -39,7 +39,7 @@ public class MedianFinder
     public double FindMedian()
     {
         if (_firstHalf.Count == _secondHalf.Count)
-            return (double)(_firstHalf.Peek() + _secondHalf.Peek()) / 2;
+            return (double) (_firstHalf.Peek() + _secondHalf.Peek()) / 2;
 
         return _secondHalf.Peek();
     }

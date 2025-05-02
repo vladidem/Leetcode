@@ -1,6 +1,6 @@
-﻿using LeetCode.Solutions.DataStructures;
+﻿using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Easy._206_Reverse_Linked_List;
+namespace Leetcode.Solutions.Easy._206._Reverse_Linked_List;
 
 /// <summary>
 ///     https://leetcode.com/problems/reverse-linked-list/

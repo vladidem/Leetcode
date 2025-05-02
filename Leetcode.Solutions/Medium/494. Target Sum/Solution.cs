@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Solutions.Medium._494_Target_Sum;
+﻿namespace Leetcode.Solutions.Medium._494._Target_Sum;
 
 /// <summary>
 ///     https://leetcode.com/problems/target-sum/

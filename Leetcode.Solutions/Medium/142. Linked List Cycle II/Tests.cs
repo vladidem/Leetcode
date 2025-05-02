@@ -1,7 +1,7 @@
 using FluentAssertions;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._142_Linked_List_Cycle_II;
+namespace Leetcode.Solutions.Medium._142._Linked_List_Cycle_II;
 
 public class Tests
 {
@@ -9,7 +9,7 @@ public class Tests
     [TestCase(new[] { 3, 4, 2, 8, 7 }, 2)]
     public void DetectCycle_ListWithNotFullCycle_ReturnsFirstNodeOfCycle(int[] nums, int cyclePosition)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
         var cycle = head.Nth(cyclePosition);
         var last = head.Last();
 
@@ -23,7 +23,7 @@ public class Tests
     [TestCase(new[] { 3, 3 })]
     public void DetectCycle_ListWithFullCycle_ReturnsHead(int[] nums)
     {
-        var head = ListNode.FromArray(nums);
+        var head = ListNode.FromArray(nums)!;
         var last = head.Last();
 
         last.next = head;

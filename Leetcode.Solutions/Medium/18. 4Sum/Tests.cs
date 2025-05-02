@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace LeetCode.Solutions.Medium._18_4_Sum;
+namespace Leetcode.Solutions.Medium._18._4Sum;
 
 public class Tests
 {

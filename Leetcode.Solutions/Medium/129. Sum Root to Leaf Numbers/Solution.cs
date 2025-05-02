@@ -1,21 +1,22 @@
 ﻿using System.Collections.Immutable;
-using LeetCode.Solutions.DataStructures;
+using Leetсode.Solutions.DataStructures;
 
-namespace LeetCode.Solutions.Medium._129_Sum_Root_to_Leaf_Numbers;
+namespace Leetcode.Solutions.Medium._129._Sum_Root_to_Leaf_Numbers;
 
 /// <summary>
 ///     https://leetcode.com/problems/sum-root-to-leaf-numbers/
 /// </summary>
 public class Solution
 {
-    public int SumNumbers(TreeNode root)
+    public int SumNumbers(TreeNode? root)
     {
         return SumNumbersRecursive(root);
     }
 
-    public int SumNumbersRecursive(TreeNode node, int sum = 0)
+    public int SumNumbersRecursive(TreeNode? node, int sum = 0)
     {
         if (node == null) return 0;
+
         sum = sum * 10 + node.val;
         if (node.left == null && node.right == null)
             return sum;
@@ -24,7 +25,7 @@ public class Solution
     }
 
 
-    public int SumNumbersPath(TreeNode root)
+    public int SumNumbersPath(TreeNode? root)
     {
         if (root == null) return 0;
 
@@ -36,31 +37,31 @@ public class Solution
         {
             var path = stack.Pop();
 
-            if (path.node.right != null)
-                stack.Push(path.Add(path.node.right));
+            if (path.Node.right != null)
+                stack.Push(path.Add(path.Node.right));
 
-            if (path.node.left != null)
-                stack.Push(path.Add(path.node.left));
+            if (path.Node.left != null)
+                stack.Push(path.Add(path.Node.left));
 
-            if (path.node.left == null && path.node.right == null)
+            if (path.Node.left == null && path.Node.right == null)
                 result += path.DigitsSum();
         }
 
         return result;
     }
 
-    public record Path(TreeNode node, ImmutableList<int> values)
+    public record Path(TreeNode Node, ImmutableList<int> Values)
     {
         public Path Add(TreeNode next)
         {
-            return new Path(next, values.Add(next.val));
+            return new Path(next, Values.Add(next.val));
         }
 
         public int DigitsSum()
         {
             int result = 0;
 
-            foreach (int digit in values)
+            foreach (int digit in Values)
             {
                 result = result * 10 + digit;
             }
