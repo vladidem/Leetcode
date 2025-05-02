@@ -12,20 +12,6 @@ public class Solution
         return DetectCycleSlowFast(head);
     }
 
-    public ListNode? DetectCycleHash(ListNode? head)
-    {
-        var nodes = new HashSet<ListNode>();
-        var current = head;
-        while (current != null)
-        {
-            if (!nodes.Add(current)) return current;
-
-            current = current.next;
-        }
-
-        return null;
-    }
-
     public ListNode? DetectCycleSlowFast(ListNode? head)
     {
         if (head == null) return null;

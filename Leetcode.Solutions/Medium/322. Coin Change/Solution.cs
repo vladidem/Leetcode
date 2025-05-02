@@ -40,7 +40,7 @@ public class Solution
         return cache[amount] != int.MaxValue ? cache[amount] : -1;
     }
 
-    private int CoinChangeRecursive(int[] coins, int amount)
+    public int CoinChangeRecursive(int[] coins, int amount)
     {
         if (amount < 0) return -1;
         if (amount == 0) return 0;

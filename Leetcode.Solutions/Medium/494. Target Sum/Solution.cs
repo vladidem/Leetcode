@@ -39,7 +39,7 @@ public class Solution
         return FindTargetSumWaysRecursive(new ArraySegment<int>(nums, 0, nums.Length), target);
     }
 
-    public int FindTargetSumWaysRecursive(ArraySegment<int> nums, int target)
+    private int FindTargetSumWaysRecursive(ArraySegment<int> nums, int target)
     {
         if (cache.TryGetValue((nums, target), out int cachedResult))
             return cachedResult;

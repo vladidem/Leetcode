@@ -7,7 +7,7 @@ public class Solution
 {
     public int SingleNumber(int[] nums)
     {
-        return SingleNumberTwoNumbers(nums);
+        return SingleNumberXor(nums);
     }
 
     public int SingleNumberBitArray(int[] nums)
@@ -22,7 +22,7 @@ public class Solution
         return result.ToInt();
     }
 
-    public int SingleNumberTwoNumbers(int[] nums)
+    private int SingleNumberXor(int[] nums)
     {
         int ones = 0;
         int twos = 0;
@@ -36,7 +36,7 @@ public class Solution
         return ones;
     }
 
-    public class TriBitNumber
+    private class TriBitNumber
     {
         private readonly int[] bits = new int[sizeof(int) * 8];
 

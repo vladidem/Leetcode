@@ -14,9 +14,17 @@ public class Tests
     };
 
     [TestCaseSource(nameof(HasPathSum_PathSumExists_ReturnsTrueCases))]
-    public void HasPathSum_PathSumExists_ReturnsTrue(TestData testData)
+    public void HasPathSumIterative_PathSumExists_ReturnsTrue(TestData testData)
     {
         bool result = new Solution().HasPathSum(TreeNode.FromArray(testData.Tree), testData.Sum);
+
+        result.Should().BeTrue();
+    }
+
+    [TestCaseSource(nameof(HasPathSum_PathSumExists_ReturnsTrueCases))]
+    public void HasPathSumRecursive_PathSumExists_ReturnsTrue(TestData testData)
+    {
+        bool result = new Solution().HasPathSumRecursive(TreeNode.FromArray(testData.Tree), testData.Sum);
 
         result.Should().BeTrue();
     }

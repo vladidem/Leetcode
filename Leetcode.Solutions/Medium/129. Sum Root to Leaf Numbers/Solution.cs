@@ -24,7 +24,6 @@ public class Solution
         return SumNumbersRecursive(node.left, sum) + SumNumbersRecursive(node.right, sum);
     }
 
-
     public int SumNumbersPath(TreeNode? root)
     {
         if (root == null) return 0;

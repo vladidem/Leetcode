@@ -29,7 +29,7 @@ public class Solution
                 var leftPieces = DiffWaysToCompute(expression, left, i - 1);
                 var rightPieces = DiffWaysToCompute(expression, i + 1, right);
                 var combinations = leftPieces.SelectMany(
-                    x => rightPieces,
+                    _ => rightPieces,
                     (y, z) => operation(y, z));
                 foreach (int result in combinations)
                 {

@@ -12,7 +12,7 @@ public class Solution
         return HasPathSumIterative(root, targetSum);
     }
 
-    private bool HasPathSumRecursive(TreeNode? node, int targetSum, int currentSum = 0)
+    public bool HasPathSumRecursive(TreeNode? node, int targetSum, int currentSum = 0)
     {
         if (node == null) return false;
 
@@ -23,7 +23,7 @@ public class Solution
                || HasPathSumRecursive(node.left, targetSum, currentSum + node.val);
     }
 
-    public bool HasPathSumIterative(TreeNode? root, int targetSum)
+    private bool HasPathSumIterative(TreeNode? root, int targetSum)
     {
         if (root == null) return false;
 

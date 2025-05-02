@@ -18,9 +18,17 @@ public class Tests
     };
 
     [TestCaseSource(nameof(SumNumbers_NotEmptyTree_ReturnsSumOfAllPathsCases))]
-    public void SumNumbers_NotEmptyTree_ReturnsSumOfAllPaths(TestData testData)
+    public void SumNumbersRecursive_NotEmptyTree_ReturnsSumOfAllPaths(TestData testData)
     {
         int result = new Solution().SumNumbers(TreeNode.FromArray(testData.Tree));
+
+        result.Should().Be(testData.result);
+    }
+
+    [TestCaseSource(nameof(SumNumbers_NotEmptyTree_ReturnsSumOfAllPathsCases))]
+    public void SumNumbersPath_NotEmptyTree_ReturnsSumOfAllPaths(TestData testData)
+    {
+        int result = new Solution().SumNumbersPath(TreeNode.FromArray(testData.Tree));
 
         result.Should().Be(testData.result);
     }

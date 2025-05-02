@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace Leetcode.Solutions.Medium._46._Permutations;
+﻿namespace Leetcode.Solutions.Medium._46._Permutations;
 
 /// <summary>
 ///     https://leetcode.com/problems/permutations/
@@ -36,17 +34,5 @@ public class Solution
             newMutation.Insert(j, newNum);
             yield return newMutation;
         }
-    }
-
-    public IEnumerable<IList<int>> PermuteRecursive(int[] nums, ImmutableHashSet<int> visited, IList<int> path)
-    {
-        if (path.Count == nums.Length) return [path];
-
-        return nums.Where(it => !visited.Contains(it)).SelectMany(it =>
-        {
-            IList<int> newPath = new List<int>(path);
-            newPath.Add(it);
-            return PermuteRecursive(nums, visited.Add(it), newPath);
-        });
     }
 }

@@ -7,7 +7,7 @@ namespace Leetcode.Solutions.Medium._103._Binary_Tree_Zigzag_Level_Order_Travers
 /// </summary>
 public class Solution
 {
-    public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
+    public IList<IList<int>> ZigzagLevelOrder(TreeNode? root)
     {
         IList<IList<int>> result = new List<IList<int>>();
         if (root == null) return result;

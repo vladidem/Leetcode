@@ -31,7 +31,7 @@ public class Solution
         return minHeap.Peek();
     }
 
-    public int FindKthLargestCustomHeap(int[] nums, int k)
+    private int FindKthLargestCustomHeap(int[] nums, int k)
     {
         var minHeap = new MinHeap();
 
@@ -52,7 +52,7 @@ public class Solution
         return minHeap.Peek();
     }
 
-    public class MinHeap
+    private class MinHeap
     {
         private readonly List<int> _heap = new();
 

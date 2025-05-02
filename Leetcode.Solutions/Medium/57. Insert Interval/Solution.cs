@@ -10,8 +10,8 @@ public class Solution
         if (intervals.Length == 0)
             return [newInterval];
 
-        int start = 0;
-        int end = 0;
+        int start;
+        int end;
         if (intervals[0][0] <= newInterval[0])
         {
             start = intervals[0][0];

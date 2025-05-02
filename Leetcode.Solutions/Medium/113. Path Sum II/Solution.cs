@@ -8,7 +8,7 @@ namespace Leetcode.Solutions.Medium._113._Path_Sum_II;
 /// </summary>
 public class Solution
 {
-    public IList<IList<int>> PathSum(TreeNode root, int targetSum)
+    public IList<IList<int>> PathSum(TreeNode? root, int targetSum)
     {
         if (root == null) return [];
 

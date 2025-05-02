@@ -7,7 +7,7 @@ namespace Leetcode.Solutions.Medium._107._Binary_Tree_Level_Order_Traversal_II;
 /// </summary>
 public class Solution
 {
-    public IList<IList<int>> LevelOrderBottom(TreeNode root)
+    public IList<IList<int>> LevelOrderBottom(TreeNode? root)
     {
         IList<IList<int>> result = new List<IList<int>>();
         if (root == null) return result;

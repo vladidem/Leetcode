@@ -37,7 +37,7 @@ public class Solution
         }
     }
 
-    public void SortColors1Pass(int[] nums)
+    private void SortColors1Pass(int[] nums)
     {
         int lastRed = -1;
         int firstBlue = nums.Length;

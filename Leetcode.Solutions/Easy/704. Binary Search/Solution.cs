@@ -10,7 +10,12 @@ public class Solution
         return SearchIterative(nums, target);
     }
 
-    public int SearchRecursive(int[] nums, int target, int left, int right)
+    public int SearchRecursive(int[] nums, int target)
+    {
+        return SearchRecursive(nums, target, 0, nums.Length - 1);
+    }
+
+    private int SearchRecursive(int[] nums, int target, int left, int right)
     {
         if (left > right || (left == right && nums[left] != target))
             return -1;
@@ -25,7 +30,7 @@ public class Solution
         return SearchRecursive(nums, target, mid + 1, Math.Min(right, nums.Length - 1));
     }
 
-    public int SearchIterative(int[] nums, int target)
+    private int SearchIterative(int[] nums, int target)
     {
         int left = 0;
         int right = nums.Length - 1;

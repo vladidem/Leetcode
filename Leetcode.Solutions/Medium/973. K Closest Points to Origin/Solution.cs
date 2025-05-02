@@ -45,7 +45,7 @@ public class Solution
 
         public Heap(Comparer<TPriority> comparer)
         {
-            _comparer = comparer ?? Comparer<TPriority>.Default;
+            _comparer = comparer;
         }
 
         public int Count => _heap.Count;

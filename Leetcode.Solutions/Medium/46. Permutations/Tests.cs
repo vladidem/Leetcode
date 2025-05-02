@@ -21,7 +21,7 @@ public class Tests
     };
 
     [TestCaseSource(nameof(Permute_NotEmpty_ReturnsAllPermutationsCases))]
-    public void Permute_NotEmpty_ReturnsAllPermutations(TestData testData)
+    public void PermuteIterative_NotEmpty_ReturnsAllPermutations(TestData testData)
     {
         var result = new Solution().Permute(testData.Nums);
 
