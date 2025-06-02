@@ -34,4 +34,27 @@ public class Solution
 
         return root;
     }
+
+    public Node ConnectRecursive(Node root)
+    {
+        if (root == null) return root;
+
+        ConnectRecursiveStep(root);
+        return root;
+    }
+
+    protected void ConnectRecursiveStep(Node node)
+    {
+        if (node.left == null || node.right == null)
+            return;
+
+        node.left.next = node.right;
+        if (node.next != null)
+        {
+            node.right.next = node.next.left;
+        }
+
+        ConnectRecursiveStep(node.left);
+        ConnectRecursiveStep(node.right);
+    }
 }

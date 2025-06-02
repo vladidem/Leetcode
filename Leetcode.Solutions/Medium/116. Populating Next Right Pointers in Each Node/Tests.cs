@@ -14,7 +14,7 @@ public class Tests
     };
 
     [TestCaseSource(nameof(PopulatingNextRightPointers_NotEmpty_ConnectsLevelsCases))]
-    public void PopulatingNextRightPointers_NotEmpty_ConnectsLevels(TestData testData)
+    public void PopulatingNextRightPointers_BreadthFirst_NotEmpty_ConnectsLevels(TestData testData)
     {
         var root = Node.FromArray(testData.Tree)!;
         root = new Solution().Connect(root);
@@ -45,6 +45,34 @@ public class Tests
     public void PopulatingNextRightPointers_Empty_NoException()
     {
         new Solution().Connect(null).Should().BeNull();
+    }
+
+    [TestCaseSource(nameof(PopulatingNextRightPointers_NotEmpty_ConnectsLevelsCases))]
+    public void PopulatingNextRightPointers_Recursive_NotEmpty_ConnectsLevels(TestData testData)
+    {
+        var root = Node.FromArray(testData.Tree)!;
+        root = new Solution().ConnectRecursive(root);
+
+        var currentNode = root;
+        int depth = 0;
+
+        while (currentNode != null)
+        {
+            var levelNode = currentNode;
+            var level = new List<int>();
+            while (levelNode != null)
+            {
+                level.Add(levelNode.val);
+                levelNode = levelNode.next;
+            }
+
+            level.Should().BeEquivalentTo(
+                testData.ExpectedLevels[depth],
+                options => options.WithStrictOrdering());
+
+            currentNode = currentNode.left;
+            depth++;
+        }
     }
 
     public record TestData(int?[] Tree, List<IList<int>> ExpectedLevels);
