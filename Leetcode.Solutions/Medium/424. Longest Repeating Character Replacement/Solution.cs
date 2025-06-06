@@ -1,7 +1,7 @@
 ﻿namespace Leetcode.Solutions.Medium._424._Longest_Repeating_Character_Replacement;
 
 /// <summary>
-///     https://leetcode.com/problems/longest-repeating-character-replacement/description/
+///     https://leetcode.com/problems/longest-repeating-character-replacement/
 /// </summary>
 public class Solution
 {
