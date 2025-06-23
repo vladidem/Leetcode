@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections;
+using System.Text;
 
 namespace Leetcode.Solutions.Hard._2081._Sum_of_k_Mirror_Numbers;
 
@@ -9,30 +10,31 @@ public class Solution
 {
     public long KMirror(int k, int n)
     {
-        int sum = 0;
-        int i = 1;
-        while (n > 0)
+        long sum = 0;
+        foreach (string numberAsString in new PalindromeEnumerable())
         {
-            if (IsMirror(ToKBase(i, k)) && IsMirror(i.ToString()))
+            long number = long.Parse(numberAsString);
+            if (IsMirror(ToKBase(number, k)))
             {
-                sum += i;
+                sum += number;
                 n--;
             }
 
-            i++;
+            if (n == 0)
+                return sum;
         }
 
         return sum;
     }
 
-    private string ToKBase(int number, int k)
+    private string ToKBase(long number, int k)
     {
         var sb = new StringBuilder();
 
         while (number > 0)
         {
-            int newNumber = number / k;
-            int remainder = number - newNumber * k;
+            long newNumber = number / k;
+            long remainder = number - newNumber * k;
             sb.Insert(0, remainder.ToString());
             number = newNumber;
         }
@@ -52,5 +54,82 @@ public class Solution
         }
 
         return true;
+    }
+}
+
+public class PalindromeEnumerable : IEnumerable<string>
+{
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    public IEnumerator<string> GetEnumerator()
+    {
+        return new PalindromeGenerator();
+    }
+}
+
+public class PalindromeGenerator : IEnumerator<string>
+{
+    private List<int> digits = [0];
+
+    public bool MoveNext()
+    {
+        int middle;
+        int middle2;
+        if (digits.Count % 2 == 0)
+        {
+            middle = digits.Count / 2 - 1;
+            middle2 = digits.Count / 2;
+        }
+        else
+        {
+            middle = middle2 = digits.Count / 2;
+        }
+
+        while (middle >= 0 && digits[middle] == 9)
+        {
+            if (middle != 0)
+            {
+                digits[middle] = 0;
+                digits[middle2] = 0;
+            }
+
+            middle--;
+            middle2++;
+        }
+
+        if (middle < 0)
+        {
+            int newLength = digits.Count + 1;
+            digits = Enumerable.Range(0, newLength).Select(i =>
+            {
+                if (i == 0 || i == newLength - 1)
+                    return 1;
+
+                return 0;
+            }).ToList();
+            return true;
+        }
+
+        digits[middle]++;
+        if (middle != middle2)
+            digits[middle2]++;
+
+        return true;
+    }
+
+    public void Reset()
+    {
+        digits = [0];
+    }
+
+    object IEnumerator.Current => Current;
+
+    public string Current => string.Join(string.Empty, digits);
+
+    public void Dispose()
+    {
     }
 }
